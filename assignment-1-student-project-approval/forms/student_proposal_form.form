@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 10,
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.20.0"
+  },
+  "type": "default",
+  "id": "Form_StudentProposal",
+  "components": [
+    {
+      "text": "# Final Year Project Proposal Submission Form\nPlease enter your project details and team member credentials.",
+      "type": "text",
+      "id": "Field_Header"
+    },
+    {
+      "label": "Project Title",
+      "type": "textfield",
+      "id": "Field_ProjectTitle",
+      "key": "projectTitle",
+      "validate": { "required": true, "minLength": 10, "maxLength": 150 }
+    },
+    {
+      "label": "Project Domain / Specialization",
+      "type": "select",
+      "id": "Field_ProjectDomain",
+      "key": "projectDomain",
+      "values": [
+        { "label": "Artificial Intelligence / Machine Learning", "value": "Artificial Intelligence" },
+        { "label": "Cloud Computing / Distributed Systems", "value": "Cloud Computing" },
+        { "label": "Cybersecurity & Blockchain", "value": "Cybersecurity" },
+        { "label": "IoT & Embedded Systems", "value": "IoT" },
+        { "label": "Web & Mobile Applications", "value": "Web Applications" }
+      ],
+      "validate": { "required": true }
+    },
+    {
+      "label": "Team Size (2 to 4 members allowed)",
+      "type": "number",
+      "id": "Field_TeamSize",
+      "key": "teamSize",
+      "validate": { "required": true, "min": 2, "max": 4 }
+    },
+    {
+      "label": "Team Lead Roll Number",
+      "type": "textfield",
+      "id": "Field_LeadRoll",
+      "key": "teamLeadRoll",
+      "validate": { "required": true, "pattern": "^[0-9]{2}[A-Z]{2}[0-9][A-Z0-9]{4}$" }
+    },
+    {
+      "label": "Team Member Roll Numbers (Comma Separated)",
+      "type": "textfield",
+      "id": "Field_MemberRolls",
+      "key": "memberRollNumbers",
+      "validate": { "required": true }
+    },
+    {
+      "label": "Executive Abstract & Problem Statement",
+      "type": "textarea",
+      "id": "Field_Abstract",
+      "key": "projectAbstract",
+      "validate": { "required": true, "minLength": 50 }
+    },
+    {
+      "label": "Expected Hardware / Lab Resource Needs",
+      "type": "textfield",
+      "id": "Field_Resources",
+      "key": "requiredResources"
+    }
+  ]
+}

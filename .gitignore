@@ -1,0 +1,9 @@
+# Local reference document
+*.docx
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 10,
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.20.0"
+  },
+  "type": "default",
+  "id": "Form_LoanApplication",
+  "components": [
+    {
+      "text": "# Retail & Secured Loan Application\nPlease submit personal and financial declarations for credit evaluation.",
+      "type": "text",
+      "id": "Field_AppHeader"
+    },
+    {
+      "label": "Applicant Full Legal Name",
+      "type": "textfield",
+      "id": "Field_ApplicantName",
+      "key": "applicantName",
+      "validate": { "required": true }
+    },
+    {
+      "label": "Tax ID / Social Security / PAN Number",
+      "type": "textfield",
+      "id": "Field_TaxId",
+      "key": "taxIdentificationNumber",
+      "validate": { "required": true }
+    },
+    {
+      "label": "Loan Type",
+      "type": "select",
+      "id": "Field_LoanType",
+      "key": "loanProductType",
+      "values": [
+        { "label": "Personal Unsecured Loan", "value": "PERSONAL_UNSECURED" },
+        { "label": "Home Mortgage Loan (Secured)", "value": "MORTGAGE_SECURED" },
+        { "label": "Commercial Working Capital Loan", "value": "COMMERCIAL_SECURED" }
+      ],
+      "validate": { "required": true }
+    },
+    {
+      "label": "Requested Loan Principal ($)",
+      "type": "number",
+      "id": "Field_RequestedAmount",
+      "key": "requestedLoanAmount",
+      "validate": { "required": true, "min": 1000, "max": 5000000 }
+    },
+    {
+      "label": "Monthly Net Income ($)",
+      "type": "number",
+      "id": "Field_MonthlyIncome",
+      "key": "monthlyNetIncome",
+      "validate": { "required": true }
+    },
+    {
+      "label": "Existing Monthly Debt Liabilities ($)",
+      "type": "number",
+      "id": "Field_ExistingDebt",
+      "key": "existingMonthlyDebt",
+      "validate": { "required": true }
+    },
+    {
+      "label": "Collateral Offered?",
+      "type": "checkbox",
+      "id": "Field_CollateralProvided",
+      "key": "collateralProvided"
+    }
+  ]
+}

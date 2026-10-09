@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 10,
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.20.0"
+  },
+  "type": "default",
+  "id": "Form_CommitteeEvaluation",
+  "components": [
+    {
+      "text": "# Review Committee Evaluation & Scoring\nEvaluate novelty, feasibility, and technical depth.",
+      "type": "text",
+      "id": "Field_EvalHeader"
+    },
+    {
+      "label": "Project Title",
+      "type": "textfield",
+      "id": "Field_EvalTitle",
+      "key": "projectTitle",
+      "disabled": true
+    },
+    {
+      "label": "Domain",
+      "type": "textfield",
+      "id": "Field_EvalDomain",
+      "key": "projectDomain",
+      "disabled": true
+    },
+    {
+      "label": "Novelty & Innovation Score (1 - 10)",
+      "type": "number",
+      "id": "Field_ScoreNovelty",
+      "key": "scoreNovelty",
+      "validate": { "required": true, "min": 1, "max": 10 }
+    },
+    {
+      "label": "Feasibility & Technical Depth Score (1 - 10)",
+      "type": "number",
+      "id": "Field_ScoreFeasibility",
+      "key": "scoreFeasibility",
+      "validate": { "required": true, "min": 1, "max": 10 }
+    },
+    {
+      "label": "Committee Final Verdict",
+      "type": "radio",
+      "id": "Field_CommitteeVerdict",
+      "key": "committeeVerdict",
+      "values": [
+        { "label": "Approve Proposal", "value": "APPROVED" },
+        { "label": "Revision Required (7-Day Cycle)", "value": "REVISION" },
+        { "label": "Reject Proposal", "value": "REJECTED" }
+      ],
+      "validate": { "required": true }
+    },
+    {
+      "label": "Committee Feedback / Justification",
+      "type": "textarea",
+      "id": "Field_Feedback",
+      "key": "committeeFeedback",
+      "validate": { "required": true }
+    }
+  ]
+}
