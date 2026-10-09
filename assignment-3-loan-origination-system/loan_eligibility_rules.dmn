@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
+             xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
+             xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
+             id="Definitions_LoanEligibility"
+             name="Loan Underwriting &amp; Risk Policy"
+             namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="decision_loan_eligibility" name="Credit Risk Tier &amp; Underwriting Policy">
+    <decisionTable id="DecisionTable_LoanPolicy" hitPolicy="FIRST">
+      <input id="Input_BureauScore" label="Credit Bureau Score (300 - 900)">
+        <inputExpression id="InputExpr_Score" typeRef="integer">
+          <text>bureauScore</text>
+        </inputExpression>
+      </input>
+      <input id="Input_DTIRatio" label="Debt-to-Income (DTI) %">
+        <inputExpression id="InputExpr_DTI" typeRef="integer">
+          <text>dtiRatio</text>
+        </inputExpression>
+      </input>
+      <input id="Input_LoanAmount" label="Requested Loan Amount ($)">
+        <inputExpression id="InputExpr_Amount" typeRef="integer">
+          <text>requestedLoanAmount</text>
+        </inputExpression>
+      </input>
+      <input id="Input_CollateralProvided" label="Collateral Provided">
+        <inputExpression id="InputExpr_Collateral" typeRef="boolean">
+          <text>collateralProvided</text>
+        </inputExpression>
+      </input>
+
+      <output id="Output_PolicyRoute" label="Policy Routing Decision" name="policyRoute" typeRef="string" />
+      <output id="Output_RiskTier" label="Assigned Risk Tier" name="riskTier" typeRef="string" />
+      <output id="Output_MaxApprovedLTV" label="Max Permissible LTV (%)" name="maxLtv" typeRef="integer" />
+      <output id="Output_SanctionNotice" label="Sanction Notice Details" name="sanctionNotice" typeRef="string" />
+
+      <!-- Rule 1: High Bureau, Low DTI, Under 100k -> Auto Approve Standard Underwriting -->
+      <rule id="Rule_L_1">
+        <inputEntry id="IE_L1_1"><text>&gt;= 750</text></inputEntry>
+        <inputEntry id="IE_L1_2"><text>&lt;= 35</text></inputEntry>
+        <inputEntry id="IE_L1_3"><text>&lt;= 100000</text></inputEntry>
+        <inputEntry id="IE_L1_4"><text>-</text></inputEntry>
+        <outputEntry id="OE_L1_1"><text>"STANDARD_UNDERWRITER"</text></outputEntry>
+        <outputEntry id="OE_L1_2"><text>"TIER_1_PRIME"</text></outputEntry>
+        <outputEntry id="OE_L1_3"><text>90</text></outputEntry>
+        <outputEntry id="OE_L1_4"><text>"Prime applicant with excellent credit standing."</text></outputEntry>
+      </rule>
+
+      <!-- Rule 2: High Bureau, Low DTI, High Value (> 100k) -> Senior Committee (L7) -->
+      <rule id="Rule_L_2">
+        <inputEntry id="IE_L2_1"><text>&gt;= 750</text></inputEntry>
+        <inputEntry id="IE_L2_2"><text>&lt;= 45</text></inputEntry>
+        <inputEntry id="IE_L2_3"><text>&gt; 100000</text></inputEntry>
+        <inputEntry id="IE_L2_4"><text>-</text></inputEntry>
+        <outputEntry id="OE_L2_1"><text>"SENIOR_COMMITTEE"</text></outputEntry>
+        <outputEntry id="OE_L2_2"><text>"TIER_1_HIGH_VALUE"</text></outputEntry>
+        <outputEntry id="OE_L2_3"><text>80</text></outputEntry>
+        <outputEntry id="OE_L2_4"><text>"High loan quantum exceeds automated delegated authority."</text></outputEntry>
+      </rule>
+
+      <!-- Rule 3: Moderate Bureau (650-749), Acceptable DTI (< 45) -> Standard Review -->
+      <rule id="Rule_L_3">
+        <inputEntry id="IE_L3_1"><text>[650..749]</text></inputEntry>
+        <inputEntry id="IE_L3_2"><text>&lt;= 45</text></inputEntry>
+        <inputEntry id="IE_L3_3"><text>&lt;= 150000</text></inputEntry>
+        <inputEntry id="IE_L3_4"><text>-</text></inputEntry>
+        <outputEntry id="OE_L3_1"><text>"STANDARD_UNDERWRITER"</text></outputEntry>
+        <outputEntry id="OE_L3_2"><text>"TIER_2_NEAR_PRIME"</text></outputEntry>
+        <outputEntry id="OE_L3_3"><text>75</text></outputEntry>
+        <outputEntry id="OE_L3_4"><text>"Moderate risk profile requires standard underwriter scrutiny."</text></outputEntry>
+      </rule>
+
+      <!-- Rule 4: High DTI (45 - 60) -> Counter Offer (L6) -->
+      <rule id="Rule_L_4">
+        <inputEntry id="IE_L4_1"><text>&gt;= 650</text></inputEntry>
+        <inputEntry id="IE_L4_2"><text>&gt; 45</text></inputEntry>
+        <inputEntry id="IE_L4_3"><text>-</text></inputEntry>
+        <inputEntry id="IE_L4_4"><text>-</text></inputEntry>
+        <outputEntry id="OE_L4_1"><text>"COUNTER_OFFER"</text></outputEntry>
+        <outputEntry id="OE_L4_2"><text>"TIER_3_ELEVATED_DTI"</text></outputEntry>
+        <outputEntry id="OE_L4_3"><text>60</text></outputEntry>
+        <outputEntry id="OE_L4_4"><text>"DTI elevated. Offer reduced principal or longer amortization."</text></outputEntry>
+      </rule>
+
+      <!-- Rule 5: Low Bureau (< 650) with Collateral -> Secured Underwriting (L5 Counter Offer) -->
+      <rule id="Rule_L_5">
+        <inputEntry id="IE_L5_1"><text>[580..649]</text></inputEntry>
+        <inputEntry id="IE_L5_2"><text>&lt;= 50</text></inputEntry>
+        <inputEntry id="IE_L5_3"><text>-</text></inputEntry>
+        <inputEntry id="IE_L5_4"><text>true</text></inputEntry>
+        <outputEntry id="OE_L5_1"><text>"COUNTER_OFFER"</text></outputEntry>
+        <outputEntry id="OE_L5_2"><text>"TIER_3_SUBPRIME_SECURED"</text></outputEntry>
+        <outputEntry id="OE_L5_3"><text>65</text></outputEntry>
+        <outputEntry id="OE_L5_4"><text>"Subprime bureau mitigated by pledged immovable asset."</text></outputEntry>
+      </rule>
+
+      <!-- Rule 6: Bureau < 650 without Collateral OR Bureau < 580 -> Direct Reject (L5) -->
+      <rule id="Rule_L_6">
+        <inputEntry id="IE_L6_1"><text>-</text></inputEntry>
+        <inputEntry id="IE_L6_2"><text>-</text></inputEntry>
+        <inputEntry id="IE_L6_3"><text>-</text></inputEntry>
+        <inputEntry id="IE_L6_4"><text>-</text></inputEntry>
+        <outputEntry id="OE_L6_1"><text>"REJECT"</text></outputEntry>
+        <outputEntry id="OE_L6_2"><text>"TIER_4_DECLINED"</text></outputEntry>
+        <outputEntry id="OE_L6_3"><text>0</text></outputEntry>
+        <outputEntry id="OE_L6_4"><text>"Credit profile fails minimum regulatory risk appetite."</text></outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_LoanPolicy">
+      <dmndi:DMNShape id="DMNShape_Decision_Loan" dmnElementRef="decision_loan_eligibility">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

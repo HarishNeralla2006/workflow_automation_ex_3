@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="Definitions_GuideAllocation" name="Guide Allocation Business Rules" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.46.1">
+  <decision id="decision_guide_allocation" name="Guide Matching &#38; Workload Quota Evaluation">
+    <decisionTable id="DecisionTable_GuideAllocation" hitPolicy="FIRST">
+      <input id="Input_ProjectDomain" label="Project Domain">
+        <inputExpression id="InputExpr_Domain" typeRef="string">
+          <text>projectDomain</text>
+        </inputExpression>
+      </input>
+      <input id="Input_CurrentWorkload" label="Current Allocated Teams Count">
+        <inputExpression id="InputExpr_Workload" typeRef="integer">
+          <text>guideCurrentLoad</text>
+        </inputExpression>
+      </input>
+      <input id="Input_FacultyRank" label="Faculty Rank">
+        <inputExpression id="InputExpr_Rank" typeRef="string">
+          <text>facultyRank</text>
+        </inputExpression>
+      </input>
+      <output id="Output_AllocationStatus" label="Allocation Status" name="allocationStatus" typeRef="string" />
+      <output id="Output_AssignedGuideId" label="Assigned Guide ID" name="assignedGuideId" typeRef="string" />
+      <output id="Output_ConfidenceScore" label="Match Score (%)" name="matchScore" typeRef="integer" />
+      <rule id="Rule_1">
+        <inputEntry id="IE_1_1">
+          <text>"Artificial Intelligence", "Machine Learning"</text>
+        </inputEntry>
+        <inputEntry id="IE_1_2">
+          <text>&lt; 3</text>
+        </inputEntry>
+        <inputEntry id="IE_1_3">
+          <text>"Professor", "Associate Professor"</text>
+        </inputEntry>
+        <outputEntry id="OE_1_1">
+          <text>"MATCH_FOUND"</text>
+        </outputEntry>
+        <outputEntry id="OE_1_2">
+          <text>"GUIDE_AI_SR_01"</text>
+        </outputEntry>
+        <outputEntry id="OE_1_3">
+          <text>95</text>
+        </outputEntry>
+      </rule>
+      <rule id="Rule_2">
+        <inputEntry id="IE_2_1">
+          <text>"Artificial Intelligence", "Machine Learning"</text>
+        </inputEntry>
+        <inputEntry id="IE_2_2">
+          <text>&lt; 2</text>
+        </inputEntry>
+        <inputEntry id="IE_2_3">
+          <text>"Assistant Professor"</text>
+        </inputEntry>
+        <outputEntry id="OE_2_1">
+          <text>"MATCH_FOUND"</text>
+        </outputEntry>
+        <outputEntry id="OE_2_2">
+          <text>"GUIDE_AI_JR_02"</text>
+        </outputEntry>
+        <outputEntry id="OE_2_3">
+          <text>88</text>
+        </outputEntry>
+      </rule>
+      <rule id="Rule_3">
+        <inputEntry id="IE_3_1">
+          <text>"Cloud Computing", "Cybersecurity", "Blockchain"</text>
+        </inputEntry>
+        <inputEntry id="IE_3_2">
+          <text>&lt; 3</text>
+        </inputEntry>
+        <inputEntry id="IE_3_3">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="OE_3_1">
+          <text>"MATCH_FOUND"</text>
+        </outputEntry>
+        <outputEntry id="OE_3_2">
+          <text>"GUIDE_SYS_03"</text>
+        </outputEntry>
+        <outputEntry id="OE_3_3">
+          <text>90</text>
+        </outputEntry>
+      </rule>
+      <rule id="Rule_4">
+        <inputEntry id="IE_4_1">
+          <text>"Web Applications", "IoT", "Embedded Systems"</text>
+        </inputEntry>
+        <inputEntry id="IE_4_2">
+          <text>&lt; 3</text>
+        </inputEntry>
+        <inputEntry id="IE_4_3">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="OE_4_1">
+          <text>"MATCH_FOUND"</text>
+        </outputEntry>
+        <outputEntry id="OE_4_2">
+          <text>"GUIDE_APP_04"</text>
+        </outputEntry>
+        <outputEntry id="OE_4_3">
+          <text>85</text>
+        </outputEntry>
+      </rule>
+      <rule id="Rule_5">
+        <inputEntry id="IE_5_1">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="IE_5_2">
+          <text>&gt;= 3</text>
+        </inputEntry>
+        <inputEntry id="IE_5_3">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="OE_5_1">
+          <text>"CAPACITY_FULL"</text>
+        </outputEntry>
+        <outputEntry id="OE_5_2">
+          <text>"NONE"</text>
+        </outputEntry>
+        <outputEntry id="OE_5_3">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="Rule_6">
+        <inputEntry id="IE_6_1">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="IE_6_2">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="IE_6_3">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="OE_6_1">
+          <text>"NO_DOMAIN_MATCH"</text>
+        </outputEntry>
+        <outputEntry id="OE_6_2">
+          <text>"NONE"</text>
+        </outputEntry>
+        <outputEntry id="OE_6_3">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_GuideAlloc">
+      <dmndi:DMNShape id="DMNShape_Decision" dmnElementRef="decision_guide_allocation">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

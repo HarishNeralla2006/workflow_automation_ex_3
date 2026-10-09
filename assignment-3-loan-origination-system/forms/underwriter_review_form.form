@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 10,
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.20.0"
+  },
+  "type": "default",
+  "id": "Form_UnderwriterReview",
+  "components": [
+    {
+      "text": "# Credit Underwriter Sanction Assessment\nReview synthesized verification findings, bureau scores, and policy recommendations.",
+      "type": "text",
+      "id": "Field_UWHeader"
+    },
+    {
+      "label": "Applicant Name",
+      "type": "textfield",
+      "id": "Field_UWApplicant",
+      "key": "applicantName",
+      "disabled": true
+    },
+    {
+      "label": "Credit Bureau Score",
+      "type": "number",
+      "id": "Field_UWBureauScore",
+      "key": "bureauScore",
+      "disabled": true
+    },
+    {
+      "label": "Calculated DTI Ratio (%)",
+      "type": "number",
+      "id": "Field_UWDTI",
+      "key": "dtiRatio",
+      "disabled": true
+    },
+    {
+      "label": "Underwriter Decision",
+      "type": "radio",
+      "id": "Field_UWDecision",
+      "key": "underwriterDecision",
+      "values": [
+        { "label": "Sanction & Approve Loan", "value": "APPROVED" },
+        { "label": "Require Collateral Inspection (Secured)", "value": "NEED_COLLATERAL" },
+        { "label": "Decline Application", "value": "REJECTED" }
+      ],
+      "validate": { "required": true }
+    },
+    {
+      "label": "Approved Loan Amount ($)",
+      "type": "number",
+      "id": "Field_SanctionedAmount",
+      "key": "sanctionedLoanAmount",
+      "validate": { "required": true }
+    },
+    {
+      "label": "Approved Annual Interest Rate (%)",
+      "type": "number",
+      "id": "Field_SanctionedRate",
+      "key": "sanctionedInterestRate",
+      "validate": { "required": true }
+    },
+    {
+      "label": "Underwriter Justification & Covenant Notes",
+      "type": "textarea",
+      "id": "Field_UWNotes",
+      "key": "underwriterNotes",
+      "validate": { "required": true }
+    }
+  ]
+}
