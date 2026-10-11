@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPMN 2.0 Workflow Automation - Architecture Presentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Organic Green Corner Accents (exact match to user screenshot) -->
+  <svg class="corner-accent-tl" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M-20 -20 C 40 -10, 80 15, 60 55 C 40 95, 110 90, 70 140 C 35 120, -10 110, -20 -20 Z" fill="#4ade80" opacity="0.85" />
+    <path d="M-10 -10 C 25 -5, 50 15, 38 42 C 25 70, 75 68, 48 105 C 22 90, -5 85, -10 -10 Z" fill="#22c55e" opacity="0.4" />
+  </svg>
+
+  <svg class="corner-accent-br" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M180 180 C 120 170, 80 145, 100 105 C 120 65, 50 70, 90 20 C 125 40, 170 50, 180 180 Z" fill="#4ade80" opacity="0.85" />
+    <path d="M170 170 C 135 165, 110 145, 122 118 C 135 90, 85 92, 112 55 C 138 70, 165 75, 170 170 Z" fill="#22c55e" opacity="0.4" />
+  </svg>
+
+  <!-- Deck Top Navigation Bar -->
+  <header class="deck-header">
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div id="projectBadge" class="project-tag tag-intro">
+      <span>Overview</span>
+    </div>
+    <div class="deck-controls">
+      <span class="slide-counter" id="slideCounter">1 / 11</span>
+      <button class="btn-ctrl" id="btnPrev" title="Previous Slide (Left Arrow)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Prev
+      </button>
+      <button class="btn-ctrl" id="btnNext" title="Next Slide (Right Arrow or Space)">
+        Next
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+      <button class="btn-ctrl" id="btnFullscreen" title="Toggle Fullscreen (F)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Slide Viewport -->
+  <main class="slides-viewport">
+
+    <!-- ==========================================
+         SLIDE 1: Title & Executive Overview
+         ========================================== -->
+    <section class="slide active" data-category="intro">
+      <div class="slide-header">
+        <h1 class="slide-title">Enterprise Workflow Automation Roadmap</h1>
+        <p class="slide-subtitle">Architectural Blueprint & Camunda BPMN 2.0 / DMN 1.3 Implementation for Academic & Banking Governance</p>
+      </div>
+
+      <div class="cards-grid grid-3">
+        <!-- Card 1 (Orange) -->
+        <div class="pill-card theme-orange">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <!-- Target Icon -->
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+            </div>
+            <span class="title-text">Assignment 1: Student Project</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">Academic capstone project governance across 5 departmental lanes, handling eligibility screening, similarity analysis, committee evaluation, and transactional guide assignment.</p>
+            <div class="meta-group">
+              <div class="meta-label">Core Automation Focus</div>
+              <div class="meta-value">5-Lane Collaboration, 14-Day Intake Window, DMN Guide Matching, Quota Compensation</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Camunda Engine Artifacts</div>
+              <span class="meta-tag">BPMN 2.0 Process</span>
+              <span class="meta-tag">DMN 1.3 Table</span>
+              <span class="meta-tag">5 Swimlanes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 (Indigo) -->
+        <div class="pill-card theme-indigo">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <!-- User Icon -->
+              <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <span class="title-text">Assignment 3: Loan Origination</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">Production-grade enterprise banking loan origination orchestrating customer interactions with 4 bank functional units via message flows, parallel due diligence, and Core Banking settlement.</p>
+            <div class="meta-group">
+              <div class="meta-label">Core Automation Focus</div>
+              <div class="meta-value">Multi-Pool Messaging, 4-Way Parallel Split/Join, DMN Underwriting, CBS Rollback</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Camunda Engine Artifacts</div>
+              <span class="meta-tag">2 Pools</span>
+              <span class="meta-tag">4 Internal Lanes</span>
+              <span class="meta-tag">DMN Risk Table</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 (Green) -->
+        <div class="pill-card theme-green">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <!-- Search/Lens Icon -->
+              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+            <span class="title-text">Presentation Objective</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">Systematic technical breakdown of each process phase covering Task Types, Gateway Logic, Intermediate/Boundary Events, and both Critical (Happy) & Alternate Exception paths.</p>
+            <div class="meta-group">
+              <div class="meta-label">Design Standard</div>
+              <div class="meta-value">OMG BPMN 2.0 & DMN 1.3 Spec Compliance with 0 Validation Faults</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Resilience Paradigms</div>
+              <span class="meta-tag">Boundary Timers</span>
+              <span class="meta-tag">Error Retries</span>
+              <span class="meta-tag">Compensation Handlers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 2: Process Roadmap
+         ========================================== -->
+    <section class="slide" data-category="intro">
+      <div class="slide-header">
+        <h1 class="slide-title">Dual Process Lifecycle Roadmap</h1>
+        <p class="slide-subtitle">Structured Three-Phase Architecture Connecting Human Review, Automated Engines, and Decision Rules</p>
+      </div>
+
+      <div class="cards-grid grid-3">
+        <!-- Card 1 (Orange) -->
+        <div class="pill-card theme-orange">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            </div>
+            <span class="title-text">Phase 1: Intake & Due Diligence</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">Intake gatekeeping ensuring only legally compliant applications proceed to resource-intensive committee reviews or underwriting.</p>
+            <div class="meta-group">
+              <div class="meta-label">Student System (P1)</div>
+              <div class="meta-value">Student proposal registration &rarr; Automated eligibility checks &rarr; Coordinator screening with 14-day deadline.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Loan System (P2)</div>
+              <div class="meta-value">Document validation &rarr; Synchronized 4-way parallel split across KYC, CIBIL, AML, and income assessment.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 (Indigo) -->
+        <div class="pill-card theme-indigo">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <span class="title-text">Phase 2: Intelligent Evaluation</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">Rigorous multi-criteria assessment combining automated analytical engines with structured human expert governance.</p>
+            <div class="meta-group">
+              <div class="meta-label">Student System (P1)</div>
+              <div class="meta-value">Similarity engine (&gt;30% flag) &rarr; Review committee evaluation &rarr; Iterative revisions (max 2) &rarr; HoD escalation.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Loan System (P2)</div>
+              <div class="meta-value">DMN multi-rule credit scoring &rarr; Underwriter risk tiering &rarr; Counter-offer drafting &rarr; High-value committee review.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 (Green) -->
+        <div class="pill-card theme-green">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <span class="title-text">Phase 3: Execution & Settlement</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">Binding legal commitments, quota state transitions, transactional core system settlement, and automated rollback compensation.</p>
+            <div class="meta-group">
+              <div class="meta-label">Student System (P1)</div>
+              <div class="meta-value">DMN domain matching &rarr; Guide invitation loop (max 3) &rarr; Coordinator override &rarr; Withdrawal quota rollback.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Loan System (P2)</div>
+              <div class="meta-value">Offer acceptance &rarr; 48h e-signature &rarr; CBS transactional disbursement sub-process &rarr; Fee refund compensation.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 3: Project 1 Overview
+         ========================================== -->
+    <section class="slide" data-category="p1">
+      <div class="slide-header">
+        <h1 class="slide-title">Project 1: Student Project Approval & Allocation</h1>
+        <p class="slide-subtitle">Camunda Process Architecture across 5 Departmental Swimlanes with Integrated DMN Decision Rules</p>
+      </div>
+
+      <div class="cards-grid grid-3">
+        <!-- Card 1 (Orange) -->
+        <div class="pill-card theme-orange">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            </div>
+            <span class="title-text">5-Lane Collaboration Pool</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">Strict separation of responsibilities mapped across academic organizational hierarchies:</p>
+            <div class="meta-group">
+              <div class="meta-label">1. Student Lane</div>
+              <div class="meta-value">Proposal submission, revision updates, resubmission, and project withdrawal.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">2. Coordinator Lane</div>
+              <div class="meta-value">Team compliance screening, plagiarism review, and manual guide allocation.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">3. Committee & Guide Lanes</div>
+              <div class="meta-value">Evaluation panel scoring; Faculty guides accept/decline assigned project slots.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">4. HoD Lane</div>
+              <div class="meta-value">High-level intervention for overdue reviews and exhausted guide allocations.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 (Indigo) -->
+        <div class="pill-card theme-indigo">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <span class="title-text">Governance & SLA Controls</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">Automated timers prevent academic gridlock across the semester cycle:</p>
+            <div class="meta-group">
+              <div class="meta-label">Intake Deadline Timer (F4)</div>
+              <div class="meta-value">14-day strict window; late submissions trigger automatic rejection termination.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Evaluation SLA Timer (F7)</div>
+              <div class="meta-value">Non-interrupting 3-day reminder to committee; interrupting 7-day HoD escalation.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Guide Response Timer (F9)</div>
+              <div class="meta-value">3 business days for faculty to respond before auto-reassigning to next faculty.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 (Green) -->
+        <div class="pill-card theme-green">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </div>
+            <span class="title-text">DMN Decision Logic</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">Externalized guide allocation business rules table (guide_allocation_rules.dmn) using First hit policy:</p>
+            <div class="meta-group">
+              <div class="meta-label">Domain Specialization Match</div>
+              <div class="meta-value">Matches Project Domain (AI/ML, Web, IoT, Cloud) to Department Faculty Research.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Workload Quota Cap</div>
+              <div class="meta-value">Enforces maximum 3 projects per professor to ensure high mentorship quality.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Academic Priority</div>
+              <div class="meta-value">Allocates high GPA student teams to senior subject specialists first.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 4: Project 1 - Phase 1
+         ========================================== -->
+    <section class="slide" data-category="p1">
+      <div class="slide-header">
+        <h1 class="slide-title">Project 1 &bull; Step 1: Proposal Intake & Screening</h1>
+        <p class="slide-subtitle">Flow Architecture, BPMN Elements, and Exception Topologies for Initial Project Onboarding</p>
+      </div>
+
+      <div class="cards-grid grid-4">
+        <!-- Card 1: Flow (Orange) -->
+        <div class="pill-card theme-orange">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+            <span class="title-text">Step Flow</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">Process starts when student team submits project title, domain, abstracts, and member details. Automated validation checks team size (2-4 students) and academic prerequisites before the Coordinator conducts initial screening.</p>
+            <div class="meta-group">
+              <div class="meta-label">Trigger</div>
+              <div class="meta-value">Start Event: "Proposal Submitted"</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Hand-off</div>
+              <div class="meta-value">Coordinator approves &rarr; Service task triggers automated plagiarism similarity check.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Task Types (Indigo) -->
+        <div class="pill-card theme-indigo">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </div>
+            <span class="title-text">Task Types Used</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">Hybrid human-automated execution ensuring verified application data:</p>
+            <div class="meta-group">
+              <div class="meta-label">User Task</div>
+              <div class="meta-value">"Submit Project Proposal" (Student) - Web form capturing team & synopsis.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Service Task</div>
+              <div class="meta-value">"Validate Team Eligibility" - Java/REST delegate verifying CGPA & course credits.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">User Task</div>
+              <div class="meta-value">"Initial Screening" (Coordinator) - Approves scope relevance or flags invalid team.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Gateways & Events (Green) -->
+        <div class="pill-card theme-green">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
+            </div>
+            <span class="title-text">Gateways & Events</span>
+          </div>
+          <div class="card-body">
+            <div class="meta-group">
+              <div class="meta-label">Exclusive Gateways (XOR)</div>
+              <div class="meta-value">"Eligibility Passed?" (Pass / Fail)<br>"Screening Passed?" (Approved / Resubmit / Reject)</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Boundary Timer Event (F4)</div>
+              <div class="meta-value">14-Day Intake Deadline attached to submission phase; cancels lingering submissions.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Boundary Error Event (F10)</div>
+              <div class="meta-value">Catches student resubmission counter &gt; 2 to prevent endless re-evaluations.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Critical & Alternate (Red) -->
+        <div class="pill-card theme-red">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            </div>
+            <span class="title-text">Paths & Exceptions</span>
+          </div>
+          <div class="card-body">
+            <div class="path-badge happy">
+              <strong>Happy Path:</strong> Valid team &rarr; Eligible &rarr; Coordinator approves &rarr; Moves to Plagiarism Check.
+            </div>
+            <div class="path-badge critical">
+              <strong>Critical Alternate (F1):</strong> Resubmission loop triggered when initial info incomplete (retry count &le; 2).
+            </div>
+            <div class="path-badge alternate">
+              <strong>Alternate Rejection (F2):</strong> Invalid team composition or &gt;2 retries triggers Rejection End Event.
+            </div>
+            <div class="path-badge alternate">
+              <strong>Time-Out Drop (F4):</strong> 14-day timer fires &rarr; Application dropped due to semester deadline.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 5: Project 1 - Phase 2
+         ========================================== -->
+    <section class="slide" data-category="p1">
+      <div class="slide-header">
+        <h1 class="slide-title">Project 1 &bull; Step 2: Plagiarism & Committee Evaluation</h1>
+        <p class="slide-subtitle">Academic Integrity Verification, Faculty Scoring, Revision Control, and Emergency Escalation</p>
+      </div>
+
+      <div class="cards-grid grid-4">
+        <!-- Card 1: Flow (Orange) -->
+        <div class="pill-card theme-orange">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            </div>
+            <span class="title-text">Step Flow</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">An automated similarity engine checks the abstract against previous repositories. If similarity &gt; 30%, coordinator reviews for duplicate flags. Once clear, the 3-member Review Committee evaluates feasibility, methodology, and scope.</p>
+            <div class="meta-group">
+              <div class="meta-label">Input / Output</div>
+              <div class="meta-value">Clean Screening &rarr; Committee Verdict: Approved / Major Revision / Rejected</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Task Types (Indigo) -->
+        <div class="pill-card theme-indigo">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <span class="title-text">Task Types Used</span>
+          </div>
+          <div class="card-body">
+            <div class="meta-group">
+              <div class="meta-label">Service Task</div>
+              <div class="meta-value">"Automated Similarity Check" - Queries Turnitin/Internal database for overlap score.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">User Task</div>
+              <div class="meta-value">"Plagiarism Review" (Coordinator) - Manual adjudication if match &gt; 30%.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">User Task</div>
+              <div class="meta-value">"Evaluate Proposal" (Review Committee) - Panel records rubric scores.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">User Task</div>
+              <div class="meta-value">"Emergency HoD Review" (HoD) - Invoked if committee evaluation exceeds SLA.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Gateways & Events (Green) -->
+        <div class="pill-card theme-green">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            </div>
+            <span class="title-text">Gateways & Events</span>
+          </div>
+          <div class="card-body">
+            <div class="meta-group">
+              <div class="meta-label">Exclusive Gateways (XOR)</div>
+              <div class="meta-value">"Similarity &le; 30%?"<br>"Duplicate Found?"<br>"Committee Verdict?" (Approve / Revise / Reject)<br>"Revision Count &lt; 2?"</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Boundary Timer (F7)</div>
+              <div class="meta-value">Non-interrupting 3-Day reminder to panel; Interrupting 7-Day timer escalates task directly to HoD.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Critical & Alternate (Cyan) -->
+        <div class="pill-card theme-cyan">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+            </div>
+            <span class="title-text">Paths & Exceptions</span>
+          </div>
+          <div class="card-body">
+            <div class="path-badge happy">
+              <strong>Happy Path:</strong> Similarity &le; 30% &rarr; Unanimous Committee Approval &rarr; Triggers Guide Allocation.
+            </div>
+            <div class="path-badge critical">
+              <strong>Critical Alternate (F5):</strong> Revision cycle; students granted 7 days to update proposal (max 2 iterations).
+            </div>
+            <div class="path-badge alternate">
+              <strong>Alternate Rejection (F6):</strong> Fatal plagiarism (&gt;30% duplicate) or Committee Rejection with 1 resubmit allowed.
+            </div>
+            <div class="path-badge critical">
+              <strong>Escalation Path (F7):</strong> 7-day SLA expiry triggers HoD override to unblock process.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 6: Project 1 - Phase 3
+         ========================================== -->
+    <section class="slide" data-category="p1">
+      <div class="slide-header">
+        <h1 class="slide-title">Project 1 &bull; Step 3: Guide Allocation & Compensation</h1>
+        <p class="slide-subtitle">DMN Business Rules, Faculty Invitation Loop, Coordinator Fallback, and Quota Compensation</p>
+      </div>
+
+      <div class="cards-grid grid-4">
+        <!-- Card 1: Flow (Orange) -->
+        <div class="pill-card theme-orange">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+            </div>
+            <span class="title-text">Step Flow</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">Approved project enters Guide Allocation sub-process. The DMN table evaluates project domain and guide workload caps to recommend faculty. The guide has 3 days to accept. If rejected, alternate guides are invited up to 3 times before manual coordinator override.</p>
+            <div class="meta-group">
+              <div class="meta-label">Completion</div>
+              <div class="meta-value">Guide accepts &rarr; Quota committed &rarr; Confirmation dispatched &rarr; End Event.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Task Types (Indigo) -->
+        <div class="pill-card theme-indigo">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <span class="title-text">Task Types Used</span>
+          </div>
+          <div class="card-body">
+            <div class="meta-group">
+              <div class="meta-label">Business Rule Task</div>
+              <div class="meta-value">"Execute Guide Matching DMN" - Evaluates domain fit and 3-student quota cap.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Send Task</div>
+              <div class="meta-value">"Send Invitation to Guide" - Dispatches invitation notification to faculty email.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">User Task</div>
+              <div class="meta-value">"Accept or Decline Request" (Guide) - Faculty accepts or rejects slot.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">User Task</div>
+              <div class="meta-value">"Manual Guide Allocation" (Coordinator) - Invoked when 3 invites are exhausted.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Gateways & Events (Green) -->
+        <div class="pill-card theme-green">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <span class="title-text">Gateways & Events</span>
+          </div>
+          <div class="card-body">
+            <div class="meta-group">
+              <div class="meta-label">Exclusive Gateways (XOR)</div>
+              <div class="meta-value">"Guide Accepted?" (Yes / No)<br>"Guide Attempts &lt; 3?" (Loop / Fallback)</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Boundary Timer (F9)</div>
+              <div class="meta-value">3-Day timeout on guide response; auto-triggers next faculty invite on expiry.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Intermediate Compensation Throw (F11)</div>
+              <div class="meta-value">Triggered if team withdraws after allocation; decrements guide workload count.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Critical & Alternate (Green) -->
+        <div class="pill-card theme-green">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <span class="title-text">Paths & Compensation</span>
+          </div>
+          <div class="card-body">
+            <div class="path-badge happy">
+              <strong>Happy Path:</strong> DMN selects primary guide &rarr; Guide accepts in &lt;3 days &rarr; Project Allocation finalized.
+            </div>
+            <div class="path-badge critical">
+              <strong>Critical Alternate (F8):</strong> First choice declines or 3-day timer lapses &rarr; System invites backup candidate.
+            </div>
+            <div class="path-badge critical">
+              <strong>Exhaustion Fallback (F9):</strong> 3 successive declines &rarr; Coordinator manually assigns available guide.
+            </div>
+            <div class="path-badge alternate">
+              <strong>Compensation Flow (F11):</strong> Team withdrawal message &rarr; Rollback handler restores guide quota in DB.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 7: Project 2 Overview
+         ========================================== -->
+    <section class="slide" data-category="p2">
+      <div class="slide-header">
+        <h1 class="slide-title">Project 2: Loan Origination & Approval System</h1>
+        <p class="slide-subtitle">Camunda Banking Choreography: Applicant Participant Pool & Bank Multi-Lane Execution</p>
+      </div>
+
+      <div class="cards-grid grid-3">
+        <!-- Card 1 (Orange) -->
+        <div class="pill-card theme-orange">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            </div>
+            <span class="title-text">Choreography & Message Pools</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">B2C Enterprise Architecture separating external customer channels from secure banking core operations:</p>
+            <div class="meta-group">
+              <div class="meta-label">1. Applicant Pool (Black-Box)</div>
+              <div class="meta-value">Represents retail customer submitting application, receiving counter-offers, and e-signing.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">2. Bank Process Pool (White-Box)</div>
+              <div class="meta-value">Contains 4 functional lanes: Front Office, Risk & Compliance, Underwriting, and Operations.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Message Flow Choreography</div>
+              <div class="meta-value">Standardized asynchronous BPMN messages: MissingDocsNotice, LoanOffer, ESignPayload.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 (Indigo) -->
+        <div class="pill-card theme-indigo">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <span class="title-text">Compliance & Regulatory Gates</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">Banking regulatory safeguards preventing fraud and credit exposure:</p>
+            <div class="meta-group">
+              <div class="meta-label">AML Blacklist Kill Switch (L3)</div>
+              <div class="meta-value">Instant Terminate End Event if international sanctions list or OFAC returns a hit.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Parallel 4-Stream Due Diligence</div>
+              <div class="meta-value">Simultaneous KYC, Credit Bureau, AML, and salary verification prevents pipeline lag.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Credit Committee Escalation (L7)</div>
+              <div class="meta-value">Mandatory dual-authorization for high-exposure loans exceeding $100,000 threshold.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 (Green) -->
+        <div class="pill-card theme-green">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <span class="title-text">Transactional Settlement</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">Core Banking System (CBS) integration wrapped in transactional safety:</p>
+            <div class="meta-group">
+              <div class="meta-label">3-Step Disbursement Sub-Process</div>
+              <div class="meta-value">Penny-drop account validation &rarr; CBS loan ledger creation &rarr; NEFT/RTGS fund transfer.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Gateway Error Handler (L12)</div>
+              <div class="meta-value">Catches 502/504 CBS API failure and routes to Operations hold queue for zero fund loss.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Withdrawal Compensation (L10)</div>
+              <div class="meta-value">Refunds processing fee if applicant cancels prior to digital signature execution.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 8: Project 2 - Phase 1
+         ========================================== -->
+    <section class="slide" data-category="p2">
+      <div class="slide-header">
+        <h1 class="slide-title">Project 2 &bull; Step 1: Intake & 4-Way Parallel Due Diligence</h1>
+        <p class="slide-subtitle">Document Completeness, Parallel API Orchestration, and Anti-Financial Crime Protection</p>
+      </div>
+
+      <div class="cards-grid grid-4">
+        <!-- Card 1: Flow (Orange) -->
+        <div class="pill-card theme-orange">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            </div>
+            <span class="title-text">Step Flow</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">Applicant submits loan documents. DMN validates completeness. Once complete, a Parallel Split Gateway forks into 4 simultaneous verification tracks: e-KYC, Credit Bureau (CIBIL/Equifax), AML Sanction Screening, and Income Assessment. All 4 must join before underwriting.</p>
+            <div class="meta-group">
+              <div class="meta-label">Trigger</div>
+              <div class="meta-value">Message Start: "Loan Application Received"</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Task Types (Indigo) -->
+        <div class="pill-card theme-indigo">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+            </div>
+            <span class="title-text">Task Types Used</span>
+          </div>
+          <div class="card-body">
+            <div class="meta-group">
+              <div class="meta-label">Business Rule Task</div>
+              <div class="meta-value">"Verify Document Completeness" - DMN table checking ID, Proof of Income, Property docs.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Service Tasks (Parallel)</div>
+              <div class="meta-value">&bull; "e-KYC Verification" (UIDAI/Govt API)<br>&bull; "Credit Bureau Pull" (CIBIL/Equifax)<br>&bull; "AML & Watchlist Screening" (Sanctions API)</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">User Tasks</div>
+              <div class="meta-value">&bull; "Income Assessment" (Credit Analyst)<br>&bull; "Manual KYC Review" (Compliance Officer)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Gateways & Events (Green) -->
+        <div class="pill-card theme-green">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            </div>
+            <span class="title-text">Gateways & Events</span>
+          </div>
+          <div class="card-body">
+            <div class="meta-group">
+              <div class="meta-label">Parallel Gateways (AND)</div>
+              <div class="meta-value">Fork Split &rarr; 4 Verification Streams &rarr; Synchronizing Join Barrier.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Boundary Timer (L1)</div>
+              <div class="meta-value">7-Day timer for missing documents; auto-lapses stale applications.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Error Boundary Event (L4)</div>
+              <div class="meta-value">Credit Bureau 504 Timeout; catches API outage and retries up to 3 times.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Terminate End Event (L3)</div>
+              <div class="meta-value">AML match instantly kills all concurrent branches for regulatory compliance.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Critical & Alternate (Red) -->
+        <div class="pill-card theme-red">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            </div>
+            <span class="title-text">Paths & Exceptions</span>
+          </div>
+          <div class="card-body">
+            <div class="path-badge happy">
+              <strong>Happy Path:</strong> Docs complete &rarr; 4 parallel streams verify successfully in &lt;45s &rarr; Enters DMN Scoring.
+            </div>
+            <div class="path-badge critical">
+              <strong>Critical Alternate (L2):</strong> Automated biometric KYC fails &rarr; Routes to Manual Video-KYC Review.
+            </div>
+            <div class="path-badge alternate">
+              <strong>Sanctions Kill (L3):</strong> AML positive flag &rarr; Triggers Terminate Event, freezes file, alerts compliance.
+            </div>
+            <div class="path-badge alternate">
+              <strong>Bureau API Timeout (L4):</strong> 3 failed retries routes to offline bureau queue without failing process.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 9: Project 2 - Phase 2
+         ========================================== -->
+    <section class="slide" data-category="p2">
+      <div class="slide-header">
+        <h1 class="slide-title">Project 2 &bull; Step 2: DMN Risk Scoring & Underwriting</h1>
+        <p class="slide-subtitle">Multi-Table Credit Decision Matrix, Counter-Offer Negotiation, and Committee Escalation</p>
+      </div>
+
+      <div class="cards-grid grid-4">
+        <!-- Card 1: Flow (Orange) -->
+        <div class="pill-card theme-orange">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            </div>
+            <span class="title-text">Step Flow</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">The DMN engine evaluates CIBIL score, Debt-to-Income (DTI), loan amount, and collateral LTV. Results branch into: Auto-Approve, Manual Underwriter Referral, Counter-Offer (reduced principal or higher rate), or Outright Rejection.</p>
+            <div class="meta-group">
+              <div class="meta-label">Input Parameters</div>
+              <div class="meta-value">Credit Score (&ge;750), DTI (&le;40%), Loan Amount (&lt;$100k), Collateral LTV (&le;80%).</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Task Types (Indigo) -->
+        <div class="pill-card theme-indigo">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <span class="title-text">Task Types Used</span>
+          </div>
+          <div class="card-body">
+            <div class="meta-group">
+              <div class="meta-label">Business Rule Task</div>
+              <div class="meta-value">"Execute Loan Eligibility DMN" - Evaluates risk grade (Tier A/B/C/Decline).</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">User Task</div>
+              <div class="meta-value">"Underwriter Assessment" - Manual review for borderline credit scores (650-749).</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">User Task</div>
+              <div class="meta-value">"Senior Credit Committee" - Dual-signoff for loan exposures exceeding $100,000.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">User Task</div>
+              <div class="meta-value">"Prepare Counter-Offer" - Formulates adjusted terms when DTI &gt; 40%.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Gateways & Events (Green) -->
+        <div class="pill-card theme-green">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <span class="title-text">Gateways & Events</span>
+          </div>
+          <div class="card-body">
+            <div class="meta-group">
+              <div class="meta-label">Exclusive Gateways (XOR)</div>
+              <div class="meta-value">"Risk Category?" (Approve / Refer / Counter / Reject)<br>"Loan Amount &gt; $100k?" (Committee vs Underwriter)<br>"Counter-Offer Accepted?" (Yes / No)<br>"Counter-Offer Count &lt; 1?" (Prevent infinite loops)</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Boundary Timer (L7)</div>
+              <div class="meta-value">48-Hour SLA on Senior Committee approval; escalates to Chief Risk Officer.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Critical & Alternate (Indigo) -->
+        <div class="pill-card theme-indigo">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <span class="title-text">Paths & Exceptions</span>
+          </div>
+          <div class="card-body">
+            <div class="path-badge happy">
+              <strong>Happy Path:</strong> DMN returns Tier A &rarr; Instant Auto-Approval &rarr; Generates Sanction Letter.
+            </div>
+            <div class="path-badge critical">
+              <strong>Critical Alternate (L5/L6):</strong> Counter-offer negotiation when DTI &gt; 45% (capped at 1 counter-proposal).
+            </div>
+            <div class="path-badge critical">
+              <strong>High-Value Branch (L7):</strong> Amount &gt; $100k escalates to Committee with strict 48-hour SLA timer.
+            </div>
+            <div class="path-badge alternate">
+              <strong>Collateral Rejection (L8):</strong> Valuation reveals title defect or LTV &gt; 80% &rarr; Formal Rejection Notice.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 10: Project 2 - Phase 3
+         ========================================== -->
+    <section class="slide" data-category="p2">
+      <div class="slide-header">
+        <h1 class="slide-title">Project 2 &bull; Step 3: Offer Acceptance, E-Sign & CBS Disbursement</h1>
+        <p class="slide-subtitle">Inter-Pool Choreography, Legal Signature SLA, CBS Transaction, and Reversal Compensation</p>
+      </div>
+
+      <div class="cards-grid grid-4">
+        <!-- Card 1: Flow (Orange) -->
+        <div class="pill-card theme-orange">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </div>
+            <span class="title-text">Step Flow</span>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">Bank sends formal Sanction Letter to Applicant Pool. Applicant has 15 days to accept, followed by 48 hours to complete biometric e-Signature. On completion, the Transactional Disbursement Sub-process interacts with the Core Banking System (CBS) to disburse funds.</p>
+            <div class="meta-group">
+              <div class="meta-label">Completion</div>
+              <div class="meta-value">NEFT credited &rarr; SMS confirmation &rarr; End Event: "Loan Disbursed".</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Task Types (Indigo) -->
+        <div class="pill-card theme-indigo">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <span class="title-text">Task Types Used</span>
+          </div>
+          <div class="card-body">
+            <div class="meta-group">
+              <div class="meta-label">Send Task</div>
+              <div class="meta-value">"Send Loan Sanction Offer" - Transmits formal contract terms to customer.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Receive Task</div>
+              <div class="meta-value">"Receive Offer Acceptance" - Awaits customer digital handshake.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">User Task</div>
+              <div class="meta-value">"Execute Digital E-Signature" (Applicant) - Aadhaar/DocuSign cryptographic signing.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Service Tasks (CBS Sub-Process)</div>
+              <div class="meta-value">&bull; "Penny-Drop Validation" &bull; "Create CBS Loan Ledger" &bull; "Execute NEFT Fund Transfer"</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Gateways & Events (Green) -->
+        <div class="pill-card theme-green">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <span class="title-text">Gateways & Events</span>
+          </div>
+          <div class="card-body">
+            <div class="meta-group">
+              <div class="meta-label">Boundary Timer (L9)</div>
+              <div class="meta-value">15-Day offer validity window; lapses offer if unaccepted by applicant.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Boundary Timer (L11)</div>
+              <div class="meta-value">48-Hour e-sign deadline; cancels application on non-execution.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Intermediate Compensation (L10)</div>
+              <div class="meta-value">Applicant withdrawal event triggers compensation to refund processing fee.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Boundary Error Event (L12)</div>
+              <div class="meta-value">Catches CBS 502/504 gateway timeout and routes to Operations hold queue.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Critical & Alternate (Green) -->
+        <div class="pill-card theme-green">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <span class="title-text">Paths & Exceptions</span>
+          </div>
+          <div class="card-body">
+            <div class="path-badge happy">
+              <strong>Happy Path:</strong> Accepted in 24h &rarr; E-Signed &rarr; CBS ledger opened &rarr; Automated fund transfer success.
+            </div>
+            <div class="path-badge critical">
+              <strong>Payment Gateway Hold (L12):</strong> CBS API error holds funds &rarr; Ops conducts manual retry with 0 double debit risk.
+            </div>
+            <div class="path-badge alternate">
+              <strong>Lapsed Offer (L9):</strong> 15-day timeout lapses sanction; reserved credit quota released.
+            </div>
+            <div class="path-badge alternate">
+              <strong>Applicant Cancellation (L10):</strong> Compensation handler refunds origination fee to customer savings account.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 11: Architectural Synthesis Matrix
+         ========================================== -->
+    <section class="slide" data-category="matrix">
+      <div class="slide-header">
+        <h1 class="slide-title">BPMN 2.0 Architectural Synthesis & Comparison</h1>
+        <p class="slide-subtitle">Comparative Matrix of Enterprise Constructs, Resiliency Patterns, and Execution Metrics</p>
+      </div>
+
+      <div class="cards-grid grid-3">
+        <!-- Card 1 (Orange) -->
+        <div class="pill-card theme-orange">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            </div>
+            <span class="title-text">Constructs Comparison</span>
+          </div>
+          <div class="card-body">
+            <div class="meta-group">
+              <div class="meta-label">Task Taxonomy</div>
+              <div class="meta-value">
+                <strong>Project 1:</strong> User, Service, Business Rule, Send<br>
+                <strong>Project 2:</strong> User, Service, Business Rule, Send, Receive, Script
+              </div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Gateway Topologies</div>
+              <div class="meta-value">
+                <strong>Project 1:</strong> Exclusive (XOR) Decision & Loop Gateways<br>
+                <strong>Project 2:</strong> Parallel (AND) Split/Join + Exclusive (XOR)
+              </div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Boundary Events</div>
+              <div class="meta-value">
+                <strong>Project 1:</strong> Timer (14d, 3d, 7d), Error (F10), Message (F11)<br>
+                <strong>Project 2:</strong> Timer (7d, 48h, 15d), Error (L4, L12), Terminate (L3)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 (Indigo) -->
+        <div class="pill-card theme-indigo">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <span class="title-text">Fault Tolerance & Compensation</span>
+          </div>
+          <div class="card-body">
+            <div class="meta-group">
+              <div class="meta-label">Intermediate Compensation Handlers</div>
+              <div class="meta-value">Both models incorporate BPMN Compensation Throw & Catch to guarantee transactional consistency (P1: Guide quota rollback; P2: Origination fee refund).</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Loop Limiting Guards</div>
+              <div class="meta-value">Explicit counter variables enforce bounded iteration (&le;2 proposal revisions, &le;3 guide invites, &le;1 loan counter-offer) preventing infinite workflow execution loops.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Sub-Process Containment</div>
+              <div class="meta-value">Disbursement and guide allocation encapsulated within sub-processes to isolate transaction failures from root process scope.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 (Green) -->
+        <div class="pill-card theme-green">
+          <div class="pill-header">
+            <div class="icon-circle">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            </div>
+            <span class="title-text">Engine Production Readiness</span>
+          </div>
+          <div class="card-body">
+            <div class="meta-group">
+              <div class="meta-label">Camunda 7 Schema Compliance</div>
+              <div class="meta-value">Zero syntax or layout errors; fully validated against OMG BPMN 2.0 & DMN 1.3 XSD schemas.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Zero Flow Deadlocks</div>
+              <div class="meta-value">All split paths join with matching gateway types; every intermediate event specifies explicit target sequence flows.</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Clean Git Repository</div>
+              <div class="meta-value">Synced to GitHub repository with authentic human commit logs and embedded Camunda modeler screenshots.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Deck Bottom Navigation Bar -->
+  <footer class="deck-footer">
+    <div class="dots-nav" id="dotsNav">
+      <!-- 11 Dots injected dynamically by app.js -->
+    </div>
+    <div class="key-hint">
+      <span>Navigate: <span class="key-badge">&larr;</span> <span class="key-badge">&rarr;</span> or <span class="key-badge">Space</span></span>
+      <span>Fullscreen: <span class="key-badge">F</span></span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

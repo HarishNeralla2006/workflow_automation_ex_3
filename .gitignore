@@ -7,3 +7,8 @@ Thumbs.db
 *.log
 .idea/
 .vscode/
+
+# Local snipping tool screenshots
+Screenshot *.png
+*.py
+
