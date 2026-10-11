@@ -736,3 +736,209 @@ body {
   font-size: 10.5px;
   color: #475569;
 }
+
+/* ========================================================
+   PROBLEM STATEMENT & SIMPLE DEMO FLOW COMPONENTS
+   ======================================================== */
+.problem-box {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.problem-icon-badge {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #ea580c;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.problem-content {
+  flex: 1;
+}
+
+.problem-tag-label {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #c2410c;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+
+.problem-text {
+  font-size: 13.5px;
+  color: #7c2d12;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Horizontal Demo Stepper (Simple 1-2-3-4-5 Flow) */
+.demo-stepper {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  flex: 1;
+  margin-top: 6px;
+}
+
+.demo-step-card {
+  flex: 1;
+  background: white;
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.demo-step-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.06);
+}
+
+.step-num-pill {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #4f46e5;
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.demo-step-card.step-p1 .step-num-pill { background: #ea580c; }
+.demo-step-card.step-p2 .step-num-pill { background: #4f46e5; }
+.demo-step-card.step-green .step-num-pill { background: #16a34a; }
+
+.step-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.step-desc {
+  font-size: 11.5px;
+  color: #64748b;
+  line-height: 1.45;
+  flex: 1;
+}
+
+.step-actor-tag {
+  margin-top: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+.actor-student { background: #ffedd5; color: #9a3412; }
+.actor-system { background: #e0e7ff; color: #3730a3; }
+.actor-committee { background: #fef3c7; color: #92400e; }
+.actor-guide { background: #dcfce7; color: #166534; }
+.actor-bank { background: #e0f2fe; color: #0369a1; }
+
+.step-arrow-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cbd5e1;
+}
+
+/* Forms & DMN Showcase Grids */
+.showcase-dual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  flex: 1;
+  min-height: 0;
+}
+
+.form-item-box {
+  background: white;
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+}
+
+.form-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.form-item-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-item-img-wrap {
+  flex: 1;
+  background: #fbfcfd;
+  border: 1px solid #f1f5f9;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: zoom-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.form-item-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.form-fields-meta {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 8px 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.form-field-pill {
+  display: inline-block;
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #334155;
+  margin: 2px 3px 2px 0;
+}
+
