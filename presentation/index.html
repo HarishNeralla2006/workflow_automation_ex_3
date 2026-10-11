@@ -46,63 +46,71 @@
   <!-- Slide Viewport -->
   <main class="slides-viewport">
 
-      <!-- ========================================================
+            <!-- ========================================================
            SLIDE 1: Executive Roadmap & Agenda
            ======================================================== -->
       <section class="slide active" data-category="intro">
         <div class="slide-header">
           <h1 class="slide-title">Enterprise Workflow Automation Roadmap</h1>
-          <p class="slide-subtitle">Camunda 8 BPMN 2.0 &bull; DMN 1.3 Decision Engines &bull; Resilient Failure Architectures</p>
+          <p class="slide-subtitle">Camunda 8 BPMN 2.0 &bull; DMN 1.3 Decision Engines &bull; Resilient Architecture</p>
         </div>
 
-        <div class="agenda-grid">
-          <!-- Card 1: Project 1 Overview -->
-          <div class="agenda-card">
-            <div class="agenda-card-header">
-              <span class="agenda-pill pill-p1">Assignment 1</span>
-              <div class="agenda-title">Student Project Approval & Allocation</div>
+        <div class="cards-grid grid-3">
+          <!-- Pillar 1 -->
+          <div class="pill-card theme-orange">
+            <div class="pill-header">
+              <div class="icon-circle">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+              </div>
+              <span class="title-text">Assignment 1: Student Project Approval</span>
             </div>
-            <div class="agenda-meta-badge">5-Swimlane Collaboration Pool &bull; Academic Domain</div>
-            <ul class="agenda-list">
-              <li><strong>1. Problem Statement & Boundaries:</strong> Intake rules, 5 swimlanes, manual gridlock.</li>
-              <li><strong>2. Simple 5-Step Demo Flow:</strong> 30-second mental model with summary matrix.</li>
-              <li><strong>3. Real BPMN 2.0 Diagram:</strong> Camunda Modeler complete process architecture.</li>
-              <li><strong>4. Deep-Dive Process Steps:</strong> Proposal intake, plagiarism check, committee review, DMN guide matching.</li>
-              <li><strong>5. Forms & DMN Tables:</strong> Proposal form schema and multi-variable quota decision logic.</li>
-              <li><strong>6. Failure Modes Covered:</strong> F1 to F11 failure register mapping.</li>
-            </ul>
+            <p class="card-desc">Academic project governance across 5 departmental swimlanes, managing proposals, similarity verification, committee scoring, and automated faculty guide allocation.</p>
+            <div class="meta-group">
+              <div class="meta-label">Architecture Highlights</div>
+              <div class="meta-value">5 Swimlanes Pool &bull; Plagiarism Service Task &bull; DMN Guide Quota Match &bull; Compensation Rollback</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Presentation Flow</div>
+              <div class="meta-value">1. Problem &rarr; 2. Simple Flow &rarr; 3. Real BPMN &rarr; 4. Deep Dives &rarr; 5. DMN &amp; Forms</div>
+            </div>
           </div>
 
-          <!-- Card 2: Project 2 Overview -->
-          <div class="agenda-card">
-            <div class="agenda-card-header">
-              <span class="agenda-pill pill-p2">Assignment 3</span>
-              <div class="agenda-title">Loan Origination & Approval System</div>
+          <!-- Pillar 2 -->
+          <div class="pill-card theme-indigo">
+            <div class="pill-header">
+              <div class="icon-circle">
+                <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </div>
+              <span class="title-text">Assignment 3: Loan Origination System</span>
             </div>
-            <div class="agenda-meta-badge">2 Pools / 4 Lanes Choreography &bull; Banking Domain</div>
-            <ul class="agenda-list">
-              <li><strong>1. Problem Statement & Boundaries:</strong> Retail credit risk, 2 pools, sequential delay.</li>
-              <li><strong>2. Simple 5-Step Demo Flow:</strong> High-level pipeline from application to disbursement.</li>
-              <li><strong>3. Real BPMN 2.0 Diagram:</strong> Parallel due diligence, underwriting, transactional CBS.</li>
-              <li><strong>4. Deep-Dive Process Steps:</strong> 4-way parallel split, AML kill switch, DMN tiering, compensation reversal.</li>
-              <li><strong>5. Forms & DMN Tables:</strong> Loan application form and credit risk decision matrix.</li>
-              <li><strong>6. Failure Modes Covered:</strong> L1 to L12 financial risk exceptions.</li>
-            </ul>
+            <p class="card-desc">Retail banking credit workflow coordinating customer interactions with internal bank lanes via message start events, 4-way parallel due diligence, and Core Banking settlement.</p>
+            <div class="meta-group">
+              <div class="meta-label">Architecture Highlights</div>
+              <div class="meta-value">2 Pools / 4 Lanes &bull; 4-Way Parallel Due Diligence &bull; AML Kill Switch &bull; Transactional Sub-Process</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Presentation Flow</div>
+              <div class="meta-value">1. Problem &rarr; 2. Simple Flow &rarr; 3. Real BPMN &rarr; 4. Deep Dives &rarr; 5. DMN &amp; Forms</div>
+            </div>
           </div>
-        </div>
 
-        <div class="footer-meta-card">
-          <div class="meta-item">
-            <div class="meta-label">BPMN Standard:</div>
-            <div class="meta-value">BPMN 2.0 Executable (Camunda 8 Engine)</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Decision Standard:</div>
-            <div class="meta-value">DMN 1.3 Decision Tables (Unique & First Hit Policies)</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Interactive Controls:</div>
-            <div class="meta-value">Left / Right / Space to navigate &bull; F for fullscreen &bull; Click any diagram to zoom</div>
+          <!-- Pillar 3 -->
+          <div class="pill-card theme-green">
+            <div class="pill-header">
+              <div class="icon-circle">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <span class="title-text">Rubric Standards &amp; Failure Modes</span>
+            </div>
+            <p class="card-desc">Execution-grade BPMN 2.0 and DMN 1.3 implementation resolving all rubric criteria and modeling complete failure registers for zero-leakage workflow execution.</p>
+            <div class="meta-group">
+              <div class="meta-label">Construct Coverage</div>
+              <div class="meta-value">User, Service, DMN, Script Tasks &bull; Exclusive XOR, Parallel AND &bull; Boundary Timers &amp; Errors</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Failure Register</div>
+              <div class="meta-value">F1–F11 (Academic Exceptions) &bull; L1–L12 (Financial Credit &amp; CBS Exceptions)</div>
+            </div>
           </div>
         </div>
       </section>
@@ -169,53 +177,6 @@
           </div>
         </div>
 
-        <!-- Problem Statement KPI & Architecture Bars to eliminate empty space -->
-        <div class="problem-kpi-bar">
-          <div class="problem-kpi-card">
-            <div class="kpi-label">Allocation Cycle Time</div>
-            <div class="kpi-value-row">
-              <span class="kpi-old">21 Days</span>
-              <span class="kpi-new">&lt; 48 Hours</span>
-            </div>
-            <div class="kpi-desc">Automated validation & strict boundary timer SLAs</div>
-          </div>
-
-          <div class="problem-kpi-card">
-            <div class="kpi-label">Team Rule Violations</div>
-            <div class="kpi-value-row">
-              <span class="kpi-old">35% Errors</span>
-              <span class="kpi-new">0% (Zero)</span>
-            </div>
-            <div class="kpi-desc">Deterministic Java service task schema checks</div>
-          </div>
-
-          <div class="problem-kpi-card">
-            <div class="kpi-label">Faculty Load Balance</div>
-            <div class="kpi-value-row">
-              <span class="kpi-old">Uncapped</span>
-              <span class="kpi-new">&le; 3 Teams</span>
-            </div>
-            <div class="kpi-desc">Enforced via DMN decision table capacity logic</div>
-          </div>
-
-          <div class="problem-kpi-card">
-            <div class="kpi-label">Failure Recovery</div>
-            <div class="kpi-value-row">
-              <span class="kpi-old">Manual Email</span>
-              <span class="kpi-new">11 Failure Paths</span>
-            </div>
-            <div class="kpi-desc">Explicit BPMN error events & rollback handlers</div>
-          </div>
-        </div>
-
-        <div class="problem-arch-footer">
-          <span><strong>Core Architecture Scope:</strong> Camunda 8 BPMN 2.0 &bull; DMN 1.3 Decision Table &bull; 5 Swimlanes &bull; 11 Failure Handlers (F1–F11)</span>
-          <div class="footer-tag-list">
-            <span class="footer-tag">Service Tasks</span>
-            <span class="footer-tag">Exclusive XOR</span>
-            <span class="footer-tag">Boundary Timers</span>
-            <span class="footer-tag">Error End Events</span>
-          </div>
         </div>
       </section>
 
@@ -301,61 +262,7 @@
           </div>
         </div>
 
-        <!-- Detailed Summary Table -->
-        <table class="stepper-table">
-          <thead>
-            <tr>
-              <th>Step #</th>
-              <th>Stage Name</th>
-              <th>Primary Actor</th>
-              <th>Input Data</th>
-              <th>BPMN Construct</th>
-              <th>Output / Next Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Step 1</strong></td>
-              <td>Proposal Submission</td>
-              <td>Student Team Lead</td>
-              <td>Title, Domain, Abstract, 2–4 Member IDs</td>
-              <td>User Task (Camunda Form)</td>
-              <td>Emits proposal token to validation service</td>
-            </tr>
-            <tr>
-              <td><strong>Step 2</strong></td>
-              <td>Eligibility &amp; Plagiarism</td>
-              <td>System + Coordinator</td>
-              <td>Student Academic Records, Archive DB</td>
-              <td>Service Task + Exclusive Gateway</td>
-              <td>Similarity &lt; 30% routes to Committee</td>
-            </tr>
-            <tr>
-              <td><strong>Step 3</strong></td>
-              <td>Committee Evaluation</td>
-              <td>Review Committee (Panel)</td>
-              <td>Proposal Synopsis, Scoring Rubric</td>
-              <td>User Task + Boundary Timer (7d)</td>
-              <td>Approved routes to Guide Allocation Engine</td>
-            </tr>
-            <tr>
-              <td><strong>Step 4</strong></td>
-              <td>DMN Guide Matching</td>
-              <td>DMN Engine (System)</td>
-              <td>Project Domain, Guide Workload DB</td>
-              <td>Business Rule Task (DMN 1.3)</td>
-              <td>Outputs selected Guide ID and updates quota</td>
-            </tr>
-            <tr>
-              <td><strong>Step 5</strong></td>
-              <td>Acceptance &amp; Confirmation</td>
-              <td>Faculty Guide + System</td>
-              <td>Allocation Notification Token</td>
-              <td>Receive Task + Service Task + End Event</td>
-              <td>Notifies team &amp; writes confirmed allocation</td>
-            </tr>
-          </tbody>
-        </table>
+        
       </section>
 
       <!-- ========================================================
@@ -711,7 +618,7 @@
               <span class="form-tag">form_proposal_submission.form</span>
             </div>
 
-            <div class="form-img-container" onclick="openLightbox('images/p1_proposal_form.png', 'Project 1: Student Proposal Submission Form')">
+            <div class="form-item-img-wrap" onclick="openLightbox('images/p1_proposal_form.png', 'Project 1: Student Proposal Submission Form')">
               <img src="images/p1_proposal_form.png" alt="Camunda Proposal Submission Form">
             </div>
 
@@ -735,7 +642,7 @@
               <span class="form-tag">guide_allocation_rules.dmn</span>
             </div>
 
-            <div class="form-img-container" onclick="openLightbox('images/p1_dmn_table.png', 'Project 1: Faculty Guide Allocation DMN Table')">
+            <div class="form-item-img-wrap" onclick="openLightbox('images/p1_dmn_table.png', 'Project 1: Faculty Guide Allocation DMN Table')">
               <img src="images/p1_dmn_table.png" alt="Guide Allocation DMN Decision Table">
             </div>
 
@@ -812,53 +719,6 @@
           </div>
         </div>
 
-        <!-- Problem Statement KPI & Architecture Bars to eliminate empty space -->
-        <div class="problem-kpi-bar">
-          <div class="problem-kpi-card">
-            <div class="kpi-label">Sanction Turnaround</div>
-            <div class="kpi-value-row">
-              <span class="kpi-old">14 Days</span>
-              <span class="kpi-new">&lt; 45 Seconds</span>
-            </div>
-            <div class="kpi-desc">Straight-through processing for Tier A low-risk profiles</div>
-          </div>
-
-          <div class="problem-kpi-card">
-            <div class="kpi-label">Fraud Containment</div>
-            <div class="kpi-value-row">
-              <span class="kpi-old">Post-Review</span>
-              <span class="kpi-new">Immediate Kill</span>
-            </div>
-            <div class="kpi-desc">Parallel AML stream terminates tokens upon sanction hits</div>
-          </div>
-
-          <div class="problem-kpi-card">
-            <div class="kpi-label">Approval Conversion</div>
-            <div class="kpi-value-row">
-              <span class="kpi-old">42% (Rigid)</span>
-              <span class="kpi-new">68% (+26%)</span>
-            </div>
-            <div class="kpi-desc">Dynamic counter-offers rescue marginal DTI applicants</div>
-          </div>
-
-          <div class="problem-kpi-card">
-            <div class="kpi-label">Ledger Consistency</div>
-            <div class="kpi-value-row">
-              <span class="kpi-old">Manual Reversal</span>
-              <span class="kpi-new">100% ACID</span>
-            </div>
-            <div class="kpi-desc">Compensation intermediate events roll back CBS holds</div>
-          </div>
-        </div>
-
-        <div class="problem-arch-footer">
-          <span><strong>Core Architecture Scope:</strong> Camunda 8 BPMN 2.0 &bull; 2 Pools / 4 Lanes &bull; Parallel Gateways &bull; 12 Failure Handlers (L1–L12)</span>
-          <div class="footer-tag-list">
-            <span class="footer-tag">Parallel Split/Join</span>
-            <span class="footer-tag">Message Events</span>
-            <span class="footer-tag">Compensation Handler</span>
-            <span class="footer-tag">Transactional Sub-Process</span>
-          </div>
         </div>
       </section>
 
@@ -944,61 +804,7 @@
           </div>
         </div>
 
-        <!-- Detailed Summary Table -->
-        <table class="stepper-table">
-          <thead>
-            <tr>
-              <th>Step #</th>
-              <th>Stage Name</th>
-              <th>Primary Actor</th>
-              <th>Input Data</th>
-              <th>BPMN Construct</th>
-              <th>Output / Next Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Step 1</strong></td>
-              <td>Loan Application</td>
-              <td>Retail Applicant</td>
-              <td>Requested Amount, Term, Salary, ID Proofs</td>
-              <td>Message Start Event (External Pool)</td>
-              <td>Triggers document completeness check</td>
-            </tr>
-            <tr>
-              <td><strong>Step 2</strong></td>
-              <td>4-Way Due Diligence</td>
-              <td>Automated Services</td>
-              <td>PAN, CIBIL API, AML Watchlist, Pay slips</td>
-              <td>Parallel Gateway (AND Fork &amp; Join)</td>
-              <td>Simultaneous 4-stream risk verification</td>
-            </tr>
-            <tr>
-              <td><strong>Step 3</strong></td>
-              <td>DMN Risk Scoring</td>
-              <td>DMN Engine (Bank)</td>
-              <td>Credit Score (600–850), DTI (20%–60%)</td>
-              <td>Business Rule Task (DMN 1.3)</td>
-              <td>Tier A (Auto), Tier B (Manual), Tier C (Counter/Decline)</td>
-            </tr>
-            <tr>
-              <td><strong>Step 4</strong></td>
-              <td>Underwriting &amp; Offer</td>
-              <td>Credit Underwriter</td>
-              <td>Risk Tier, Collateral Title Report</td>
-              <td>User Task + Exclusive Gateway</td>
-              <td>Generates contract &amp; dispatches offer token</td>
-            </tr>
-            <tr>
-              <td><strong>Step 5</strong></td>
-              <td>E-Sign &amp; CBS Transfer</td>
-              <td>Applicant &amp; Core Banking</td>
-              <td>Aadhaar OTP Signature, Account Details</td>
-              <td>Transactional Sub-Process + Compensation</td>
-              <td>Disburses funds via NEFT &amp; creates loan account</td>
-            </tr>
-          </tbody>
-        </table>
+        
       </section>
 
       <!-- ========================================================
@@ -1357,7 +1163,7 @@
               <span class="form-tag">form_loan_application.form</span>
             </div>
 
-            <div class="form-img-container" onclick="openLightbox('images/p2_application_form.png', 'Project 2: Retail Loan Application Form')">
+            <div class="form-item-img-wrap" onclick="openLightbox('images/p2_application_form.png', 'Project 2: Retail Loan Application Form')">
               <img src="images/p2_application_form.png" alt="Camunda Loan Application Form">
             </div>
 
@@ -1381,7 +1187,7 @@
               <span class="form-tag">credit_risk_matrix.dmn</span>
             </div>
 
-            <div class="form-img-container" onclick="openLightbox('images/p2_dmn_table.png', 'Project 2: Credit Risk Decision Table')">
+            <div class="form-item-img-wrap" onclick="openLightbox('images/p2_dmn_table.png', 'Project 2: Credit Risk Decision Table')">
               <img src="images/p2_dmn_table.png" alt="Credit Risk DMN Decision Table">
             </div>
 
