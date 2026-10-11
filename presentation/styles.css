@@ -943,125 +943,94 @@ body {
 }
 
 /* ========================================================
-   SPEAKER SCRIPT CALLOUT & BPMN ELEMENT ALPHABET CARDS
+   PAIN VS SOLUTION COMPARISON GRID
    ======================================================== */
-.speaker-notes-box {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-left: 4px solid #4f46e5;
-  border-radius: 10px;
-  padding: 10px 14px;
-  margin-top: 10px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+.pain-solution-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 12px;
 }
 
-.speaker-notes-header {
+.pain-box {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.pain-box-title {
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #991b1b;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 11px;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #4338ca;
-  letter-spacing: 0.5px;
-  margin-bottom: 4px;
 }
 
-.speaker-notes-text {
-  font-size: 12px;
-  color: #334155;
-  line-height: 1.5;
-  font-style: italic;
-}
-
-/* BPMN Elements Master Key Grid */
-.elements-master-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  flex: 1;
-}
-
-.element-master-card {
-  background: white;
-  border: 1px solid var(--border-card);
-  border-radius: 12px;
-  padding: 14px;
+.pain-list {
+  list-style: none;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+  gap: 4px;
+  font-size: 12px;
+  color: #7f1d1d;
+  line-height: 1.4;
 }
 
-.element-master-top {
+.pain-list li {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #f1f5f9;
+  align-items: flex-start;
+  gap: 6px;
 }
 
-.element-bpmn-icon {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-weight: 800;
-  font-size: 14px;
+.solution-box {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+  padding: 12px 14px;
 }
 
-.icon-user { background: #e0e7ff; color: #4338ca; border: 1px solid #c7d2fe; }
-.icon-service { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
-.icon-rule { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
-.icon-send { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
-.icon-receive { background: #f3e8ff; color: #6b21a8; border: 1px solid #e9d5ff; }
-.icon-xor { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
-.icon-and { background: #ccfbf1; color: #115e59; border: 1px solid #99f6e4; }
-.icon-timer { background: #ffedd5; color: #9a3412; border: 1px solid #fed7aa; }
-.icon-error { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
-.icon-comp { background: #fce7f3; color: #9d174d; border: 1px solid #fbcfe8; }
-
-.element-master-name {
-  font-size: 13px;
-  font-weight: 800;
-  color: #0f172a;
-}
-
-.element-master-why {
+.solution-box-title {
   font-size: 11.5px;
-  color: #475569;
-  line-height: 1.45;
-  margin-bottom: 8px;
-  flex: 1;
-}
-
-.element-master-camunda {
-  background: #f8fafc;
-  border-radius: 6px;
-  padding: 6px 8px;
-  font-size: 11px;
-  color: #1e293b;
-  border: 1px solid #e2e8f0;
-}
-
-.element-master-camunda strong {
-  font-size: 10px;
+  font-weight: 800;
   text-transform: uppercase;
-  color: #64748b;
-  display: block;
-  margin-bottom: 2px;
+  color: #166534;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-/* Sequential Visual Path Journey Box */
+.solution-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: #14532d;
+  line-height: 1.4;
+}
+
+.solution-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+/* ========================================================
+   VISUAL PATH JOURNEY STEPPERS (NODE BY NODE)
+   ======================================================== */
 .path-journey-box {
   background: white;
   border: 1px solid var(--border-card);
   border-radius: 10px;
   padding: 10px 12px;
-  margin-bottom: 8px;
+  margin-top: 6px;
 }
 
 .path-journey-header {
@@ -1077,32 +1046,61 @@ body {
 
 .path-journey-steps {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
   gap: 5px;
-  font-size: 11.5px;
-  line-height: 1.4;
+  font-size: 11px;
 }
 
 .journey-node {
-  background: #f1f5f9;
-  border: 1px solid #cbd5e1;
-  padding: 2px 7px;
-  border-radius: 4px;
-  font-weight: 600;
-  color: #1e293b;
+  padding: 3px 7px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  border: 1px solid transparent;
 }
 
-.journey-node.node-start { background: #ecfdf5; border-color: #a7f3d0; color: #065f46; }
-.journey-node.node-task { background: #eef2ff; border-color: #c7d2fe; color: #3730a3; }
-.journey-node.node-gateway { background: #fefce8; border-color: #fef08a; color: #854d0e; }
-.journey-node.node-end { background: #f0fdf4; border-color: #86efac; color: #166534; font-weight: 700; }
-.journey-node.node-fail { background: #fef2f2; border-color: #fca5a5; color: #991b1b; font-weight: 700; }
+.journey-node.node-start { background: #dcfce7; color: #166534; border-color: #86efac; }
+.journey-node.node-task { background: #e0e7ff; color: #3730a3; border-color: #c7d2fe; }
+.journey-node.node-gateway { background: #fef3c7; color: #92400e; border-color: #fde68a; }
+.journey-node.node-event { background: #ffedd5; color: #9a3412; border-color: #fed7aa; }
+.journey-node.node-end { background: #dcfce7; color: #166534; border-color: #86efac; }
+.journey-node.node-fail { background: #fee2e2; color: #991b1b; border-color: #fca5a5; }
 
 .journey-arrow {
   color: #94a3b8;
   font-weight: 800;
-  font-size: 11px;
+}
+
+/* ========================================================
+   SPEAKER CUE / PRESENTER NOTES ACCORDION / BOX
+   ======================================================== */
+.speaker-cue-box {
+  background: #f8fafc;
+  border-left: 3px solid #6366f1;
+  border-radius: 0 8px 8px 0;
+  padding: 8px 12px;
+  margin-top: 6px;
+}
+
+.speaker-cue-title {
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #4f46e5;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.speaker-cue-text {
+  font-size: 11.5px;
+  color: #334155;
+  line-height: 1.45;
+  font-style: italic;
 }
 
 

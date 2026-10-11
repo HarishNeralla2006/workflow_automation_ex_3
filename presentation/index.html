@@ -28,7 +28,7 @@
       <span>Overview</span>
     </div>
     <div class="deck-controls">
-      <span class="slide-counter" id="slideCounter">1 / 18</span>
+      <span class="slide-counter" id="slideCounter">1 / 16</span>
       <button class="btn-ctrl" id="btnPrev" title="Previous Slide (Left Arrow)">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
         Prev
@@ -67,7 +67,7 @@
           <p class="card-desc">Academic capstone project governance across 5 departmental lanes, handling student proposals, plagiarism detection, committee evaluations, and automated faculty guide matching.</p>
           <div class="meta-group">
             <div class="meta-label">Presentation Journey</div>
-            <div class="meta-value">1. Problem & Simple Story &rarr; 2. Forms &rarr; 3. DMN Table &rarr; 4. BPMN Elements Alphabet &rarr; 5. Step Deep Dives &rarr; 6. Full Complex Diagram</div>
+            <div class="meta-value">1. Problem & Pain Points &rarr; 2. Simple 5-Step Demo &rarr; 3. User Forms &rarr; 4. DMN Table &rarr; 5. Full BPMN &rarr; 6. Step Deep Dives.</div>
           </div>
         </div>
 
@@ -82,7 +82,7 @@
           <p class="card-desc">End-to-end retail banking origination orchestrating customer interactions with 4 internal bank lanes via message flows, 4-way parallel due diligence, and Core Banking settlement.</p>
           <div class="meta-group">
             <div class="meta-label">Presentation Journey</div>
-            <div class="meta-value">1. Problem & Simple Story &rarr; 2. Forms &rarr; 3. DMN Table &rarr; 4. BPMN Elements Alphabet &rarr; 5. Step Deep Dives &rarr; 6. Full Complex Diagram</div>
+            <div class="meta-value">1. Problem & Pain Points &rarr; 2. Simple 5-Step Demo &rarr; 3. User Forms &rarr; 4. DMN Table &rarr; 5. Full BPMN &rarr; 6. Step Deep Dives.</div>
           </div>
         </div>
 
@@ -92,12 +92,12 @@
             <div class="icon-circle">
               <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             </div>
-            <span class="title-text">How to Navigate & Present</span>
+            <span class="title-text">How to Present & Explain</span>
           </div>
-          <p class="card-desc">Every slide gives you the visual diagram, exact technical constructs, and a built-in <strong>Speaker Script</strong> so you can confidently explain the entire flow to your evaluator.</p>
+          <p class="card-desc">Every slide combines high-resolution Camunda diagrams with node-by-node breadcrumbs, element explanations, and built-in Presenter Notes for your viva.</p>
           <div class="meta-group">
             <div class="meta-label">Presentation Controls</div>
-            <div class="meta-value">&larr; &rarr; or Space: Navigate &bull; F: Fullscreen &bull; Click Image: Zoom in &bull; Esc: Close Zoom</div>
+            <div class="meta-value">&larr; &rarr; or Space: Navigate &bull; F: Fullscreen &bull; Click Any Diagram: Zoom in &bull; Esc: Close Zoom</div>
           </div>
         </div>
       </div>
@@ -112,73 +112,84 @@
         <p class="slide-subtitle">Student Project Approval & Allocation Programme &bull; The High-Level 30-Second Mental Model</p>
       </div>
 
-      <!-- Problem Statement Banner -->
-      <div class="problem-box">
-        <div class="problem-icon-badge">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-        </div>
-        <div class="problem-content">
-          <div class="problem-tag-label">The Real-World Problem We Are Solving</div>
-          <div class="problem-text">
-            In universities, managing 500+ capstone project teams manually causes chaos: students submit duplicate topics, form invalid teams (1 or 5 members), committee reviews get delayed for weeks without accountability, and popular professors get overloaded while junior faculty receive zero teams. <strong>This workflow automates the entire lifecycle from proposal to guide assignment.</strong>
+      <!-- Pain vs Solution Grid -->
+      <div class="pain-solution-grid">
+        <div class="pain-box">
+          <div class="pain-box-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+            Manual Pain Points (Why Universities Struggle)
           </div>
+          <ul class="pain-list">
+            <li>&bull; <strong>Duplicate Topics:</strong> Multiple teams choose identical projects unnoticed.</li>
+            <li>&bull; <strong>Invalid Teams:</strong> Students apply alone or in groups of 5+, violating rules.</li>
+            <li>&bull; <strong>Evaluation Bottlenecks:</strong> Committee reviews take 3+ weeks with zero accountability.</li>
+            <li>&bull; <strong>Faculty Burnout:</strong> Popular professors get overloaded; junior faculty get 0 teams.</li>
+          </ul>
+        </div>
+
+        <div class="solution-box">
+          <div class="solution-box-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            Camunda Automated Solution
+          </div>
+          <ul class="solution-list">
+            <li>&bull; <strong>Automated Validation:</strong> Enforces team size (2-4) and student uniqueness instantly.</li>
+            <li>&bull; <strong>Similarity Scan:</strong> Flag topics exceeding 30% plagiarism automatically.</li>
+            <li>&bull; <strong>Strict SLA Timers:</strong> 3-day reminder + 7-day HoD emergency escalation.</li>
+            <li>&bull; <strong>DMN Guide Matching:</strong> Domain-based matching + 3-project quota ceiling.</li>
+          </ul>
         </div>
       </div>
 
       <!-- Horizontal Stepper (Simple 5-Step Demo Flow) -->
       <div class="demo-stepper">
-        <!-- Step 1 -->
         <div class="demo-step-card step-p1">
           <div class="step-num-pill">1</div>
           <div class="step-title">Submit Proposal</div>
-          <div class="step-desc">Students form a team of 2–4 and submit their project title, abstract, and specialization online.</div>
+          <div class="step-desc">Team of 2–4 submits title, abstract, and specialization online.</div>
           <span class="step-actor-tag actor-student">Student Lane</span>
         </div>
 
         <div class="step-arrow-divider">&rarr;</div>
 
-        <!-- Step 2 -->
         <div class="demo-step-card step-p1">
           <div class="step-num-pill">2</div>
           <div class="step-title">Automated Checks</div>
-          <div class="step-desc">System verifies team prerequisites and runs plagiarism similarity scan (&le;30% threshold).</div>
+          <div class="step-desc">System validates team rules and scans similarity (&le;30% match).</div>
           <span class="step-actor-tag actor-system">System & Coordinator</span>
         </div>
 
         <div class="step-arrow-divider">&rarr;</div>
 
-        <!-- Step 3 -->
         <div class="demo-step-card step-p1">
           <div class="step-num-pill">3</div>
           <div class="step-title">Committee Review</div>
-          <div class="step-desc">Faculty panel scores novelty & feasibility (1–10). Revision cycles are capped at 2.</div>
+          <div class="step-desc">Faculty panel scores novelty (1–10). Max 2 revision cycles.</div>
           <span class="step-actor-tag actor-committee">Review Committee</span>
         </div>
 
         <div class="step-arrow-divider">&rarr;</div>
 
-        <!-- Step 4 -->
         <div class="demo-step-card step-p1">
           <div class="step-num-pill">4</div>
-          <div class="step-title">DMN Guide Matching</div>
-          <div class="step-desc">Decision table matches project domain to faculty expertise and enforces a 3-project quota cap.</div>
+          <div class="step-title">DMN Guide Match</div>
+          <div class="step-desc">Decision table matches domain & enforces 3-team quota cap.</div>
           <span class="step-actor-tag actor-system">DMN Decision Engine</span>
         </div>
 
         <div class="step-arrow-divider">&rarr;</div>
 
-        <!-- Step 5 -->
         <div class="demo-step-card step-p1">
           <div class="step-num-pill">5</div>
           <div class="step-title">Guide Acceptance</div>
-          <div class="step-desc">Faculty accepts slot within 3 days; system records allocation and sends official confirmation.</div>
+          <div class="step-desc">Faculty accepts slot within 3 days; master record confirmed.</div>
           <span class="step-actor-tag actor-guide">Faculty Guide</span>
         </div>
       </div>
 
-      <div class="speaker-notes-box">
-        <div class="speaker-notes-header">🎤 Presenter Script (Say this out loud)</div>
-        <div class="speaker-notes-text">"Before we look at the complete BPMN diagram with 5 swimlanes, here is the simple 30-second story: A student team submits a project online &rarr; Camunda automatically checks team rules and similarity &rarr; the Committee reviews and scores it &rarr; a DMN decision table finds the best matching professor with open quota &rarr; and the guide formally accepts. That is the golden path."</div>
+      <div class="speaker-cue-box">
+        <div class="speaker-cue-title">🎤 Presenter Script (Say this out loud)</div>
+        <div class="speaker-cue-text">"Before we examine the 5-lane BPMN diagram, here is the simple 30-second story: A student team submits their project proposal online &rarr; Camunda automatically validates team rules and scans for plagiarism &rarr; the Committee scores the project &rarr; a DMN decision table automatically pairs the team with an available professor &rarr; and the guide accepts within 3 days. That is our golden path."</div>
       </div>
     </section>
 
@@ -205,13 +216,13 @@
             <img src="images/p1_proposal_form.png" alt="Student Proposal Form">
           </div>
           <div class="form-fields-meta">
-            <div class="meta-label">Captured Form Fields</div>
+            <div class="meta-label">Captured Form Fields & Constraints</div>
             <span class="form-field-pill">Project Title (Text)</span>
             <span class="form-field-pill">Domain / Specialization (Dropdown)</span>
-            <span class="form-field-pill">Team Size: 2 to 4 (Number)</span>
+            <span class="form-field-pill">Team Size: 2 to 4 (Number validation)</span>
             <span class="form-field-pill">Team Lead Roll No (Text)</span>
-            <span class="form-field-pill">Team Members Roll Nos (Text)</span>
-            <span class="form-field-pill">Abstract & Problem Statement (Textarea)</span>
+            <span class="form-field-pill">Team Member Roll Nos (Comma-separated)</span>
+            <span class="form-field-pill">Executive Abstract & Problem Statement (Textarea)</span>
             <span class="form-field-pill">Hardware/Lab Needs (Text)</span>
           </div>
         </div>
@@ -229,19 +240,19 @@
             <img src="images/p1_committee_form.png" alt="Committee Evaluation Form">
           </div>
           <div class="form-fields-meta">
-            <div class="meta-label">Captured Form Fields</div>
-            <span class="form-field-pill">Project Title & Domain (Readonly)</span>
-            <span class="form-field-pill">Novelty & Innovation (1-10)</span>
-            <span class="form-field-pill">Feasibility & Depth (1-10)</span>
-            <span class="form-field-pill">Final Verdict: Approve / Revise / Reject</span>
-            <span class="form-field-pill">Feedback / Justification (Textarea)</span>
+            <div class="meta-label">Captured Form Fields & Scoring Options</div>
+            <span class="form-field-pill">Project Title & Domain (Read-only verified)</span>
+            <span class="form-field-pill">Novelty & Innovation (1-10 Slider)</span>
+            <span class="form-field-pill">Feasibility & Depth (1-10 Slider)</span>
+            <span class="form-field-pill">Verdict: Approve / Revise (7-Day) / Reject</span>
+            <span class="form-field-pill">Committee Feedback / Justification (Textarea)</span>
           </div>
         </div>
       </div>
 
-      <div class="speaker-notes-box">
-        <div class="speaker-notes-header">🎤 Presenter Script (Say this out loud)</div>
-        <div class="speaker-notes-text">"Notice how data integrity is enforced right at the boundary: The student form restricts team sizes to 2–4 members, preventing solo or oversized groups. On the right, the committee form locks project details so professors focus solely on scoring novelty (1–10) and selecting a binding verdict."</div>
+      <div class="speaker-cue-box">
+        <div class="speaker-cue-title">🎤 Presenter Script (Say this out loud)</div>
+        <div class="speaker-cue-text">"Notice how data integrity is enforced right at the form boundary: The student form enforces team size strictly between 2 and 4, preventing single-member or oversized applications. On the right, the committee form presents project details as read-only, forcing professors to focus solely on scoring novelty (1–10) and selecting a binding verdict."</div>
       </div>
     </section>
 
@@ -280,17 +291,17 @@
           <div class="arch-card">
             <div class="arch-card-header">
               <span class="badge-dot badge-orange"></span>
-              How the Brain Decides Automatically
+              Why Use DMN Instead of Hardcoded If-Else Code?
             </div>
             <div class="arch-card-content">
-              Instead of coordinators manually picking professors, the Camunda DMN engine automatically evaluates 3 input conditions and assigns the best faculty member in milliseconds.
+              Hardcoding assignment logic in Java requires recompiling and redeploying the workflow for every policy change. DMN externalizes business rules into a transparent visual table that department heads can update at runtime without redeploying code.
             </div>
           </div>
 
           <div class="arch-card">
             <div class="arch-card-header">
               <span class="badge-dot badge-indigo"></span>
-              Rule Breakdown (When &rarr; Then)
+              Deterministic Rule Breakdown (When &rarr; Then)
             </div>
             <div class="arch-list">
               <div class="arch-item">
@@ -318,329 +329,19 @@
         </div>
       </div>
 
-      <div class="speaker-notes-box">
-        <div class="speaker-notes-header">🎤 Presenter Script (Say this out loud)</div>
-        <div class="speaker-notes-text">"Why is DMN so powerful here? Because the business rules are externalized from Java code. If a professor goes on sabbatical or department quotas change from 3 to 4, an administrator simply updates this decision table in Camunda without having to rewrite or redeploy the BPMN workflow!"</div>
+      <div class="speaker-cue-box">
+        <div class="speaker-cue-title">🎤 Presenter Script (Say this out loud)</div>
+        <div class="speaker-cue-text">"Notice how Rule 5 guarantees resilience: If all senior AI professors are booked with 3 teams, the DMN returns 'CAPACITY_FULL'. This doesn't crash the workflow—instead, the BPMN gateway catches it and routes the team to the Coordinator for manual mentor allocation."</div>
       </div>
     </section>
 
     <!-- ========================================================
-         SLIDE 5: Project 1 - BPMN Elements Master Key (The Visual Alphabet)
+         SLIDE 5: Project 1 - Full Complex BPMN 2.0 Diagram
          ======================================================== -->
     <section class="slide" data-category="p1">
       <div class="slide-header">
-        <h1 class="slide-title">Project 1 &bull; BPMN Elements Master Key (The Visual Alphabet)</h1>
-        <p class="slide-subtitle">Understand Every Task Type, Gateway, and Boundary Event Before Inspecting the Diagram</p>
-      </div>
-
-      <div class="elements-master-grid">
-        <!-- Element 1: User Task -->
-        <div class="element-master-card">
-          <div class="element-master-top">
-            <div class="element-bpmn-icon icon-user">👤</div>
-            <span class="element-master-name">User Task</span>
-          </div>
-          <div class="element-master-why">
-            <strong>Why used:</strong> Requires human cognition, subjective scoring, or manual intervention (e.g. Student Proposal, Committee Scoring, Coordinator Screening).
-          </div>
-          <div class="element-master-camunda">
-            <strong>Camunda Execution:</strong> Emits task to Camunda Tasklist UI; pauses process token until form is submitted.
-          </div>
-        </div>
-
-        <!-- Element 2: Service Task -->
-        <div class="element-master-card">
-          <div class="element-master-top">
-            <div class="element-bpmn-icon icon-service">⚙️</div>
-            <span class="element-master-name">Service Task</span>
-          </div>
-          <div class="element-master-why">
-            <strong>Why used:</strong> Fully automated computational logic that executes in milliseconds without humans (e.g. Team Rule Validation, Plagiarism Engine, Database Logging).
-          </div>
-          <div class="element-master-camunda">
-            <strong>Camunda Execution:</strong> Invokes Java Delegate / REST API worker; automatically advances token upon completion.
-          </div>
-        </div>
-
-        <!-- Element 3: Business Rule Task -->
-        <div class="element-master-card">
-          <div class="element-master-top">
-            <div class="element-bpmn-icon icon-rule">📋</div>
-            <span class="element-master-name">Business Rule Task</span>
-          </div>
-          <div class="element-master-why">
-            <strong>Why used:</strong> Executes complex decision logic separated from workflow code (e.g. matching project domain to faculty expertise and quota limits).
-          </div>
-          <div class="element-master-camunda">
-            <strong>Camunda Execution:</strong> Evaluates DMN 1.3 Decision Table (`guide_allocation_rules.dmn`) using First-hit policy.
-          </div>
-        </div>
-
-        <!-- Element 4: Exclusive Gateway (XOR) -->
-        <div class="element-master-card">
-          <div class="element-master-top">
-            <div class="element-bpmn-icon icon-xor">🔀</div>
-            <span class="element-master-name">Exclusive Gateway (XOR)</span>
-          </div>
-          <div class="element-master-why">
-            <strong>Why used:</strong> Decision fork where exactly ONE mutually exclusive path is chosen based on boolean conditions (e.g. Valid vs Invalid, Approved vs Revision).
-          </div>
-          <div class="element-master-camunda">
-            <strong>Camunda Execution:</strong> Evaluates conditional expressions on outgoing sequence flows; selects first matching flow.
-          </div>
-        </div>
-
-        <!-- Element 5: Boundary Timer Event -->
-        <div class="element-master-card">
-          <div class="element-master-top">
-            <div class="element-bpmn-icon icon-timer">⏱️</div>
-            <span class="element-master-name">Boundary Timer Event</span>
-          </div>
-          <div class="element-master-why">
-            <strong>Why used:</strong> Enforces SLAs and prevents tasks from hanging forever (14d intake deadline, 3d panel reminder, 7d HoD escalation, 3d guide response).
-          </div>
-          <div class="element-master-camunda">
-            <strong>Camunda Execution:</strong> Camunda Job Executor sets cron/duration timer; fires interrupt or non-interrupt flow on expiry.
-          </div>
-        </div>
-
-        <!-- Element 6: Compensation Event -->
-        <div class="element-master-card">
-          <div class="element-master-top">
-            <div class="element-bpmn-icon icon-comp">↩️</div>
-            <span class="element-master-name">Compensation Event</span>
-          </div>
-          <div class="element-master-why">
-            <strong>Why used:</strong> Business rollback handler. If a student team withdraws after allocation, compensation automatically restores the professor's quota.
-          </div>
-          <div class="element-master-camunda">
-            <strong>Camunda Execution:</strong> Intermediate Compensation Throw event calls attached compensation boundary activity to undo state.
-          </div>
-        </div>
-      </div>
-
-      <div class="speaker-notes-box">
-        <div class="speaker-notes-header">🎤 Presenter Script (Say this out loud)</div>
-        <div class="speaker-notes-text">"Think of these 6 symbols as the alphabet of our workflow. Whenever you see a gear icon, it means zero human delay. Whenever you see a person, it means a form waiting in a queue. Whenever you see a timer on a box boundary, it means an SLA guarantee so the process never gets stuck."</div>
-      </div>
-    </section>
-
-    <!-- ========================================================
-         SLIDE 6: Project 1 - Step 1 Deep Dive: Intake & Screening
-         ======================================================== -->
-    <section class="slide" data-category="p1">
-      <div class="slide-header">
-        <h1 class="slide-title">Project 1 &bull; Step 1: Proposal Intake & Eligibility Screening</h1>
-        <p class="slide-subtitle">Student Registration, Automated Team Validation, Defect Loops, and Coordinator Gatekeeping</p>
-      </div>
-
-      <div class="split-showcase">
-        <div class="diagram-visual-box">
-          <div class="diagram-header-bar">
-            <span class="diagram-title"><span class="badge-dot badge-orange"></span> Step 1 BPMN Crop</span>
-            <button class="diagram-zoom-btn" onclick="openLightbox('images/p1_phase1_intake.png', 'Step 1: Proposal Intake & Screening BPMN Flow')">Zoom</button>
-          </div>
-          <div class="diagram-img-wrap" onclick="openLightbox('images/p1_phase1_intake.png', 'Step 1: Proposal Intake & Screening BPMN Flow')">
-            <img src="images/p1_phase1_intake.png" alt="Step 1 BPMN Diagram">
-          </div>
-          <div class="diagram-callout-footer">
-            <span class="callout-pill trigger">Start Event</span>
-            <span class="callout-pill task">User Task</span>
-            <span class="callout-pill task">Service Task</span>
-            <span class="callout-pill gateway">Exclusive Gateway</span>
-            <span class="callout-pill event">14d Boundary Timer</span>
-            <span class="callout-pill event">Error End Event</span>
-          </div>
-        </div>
-
-        <div class="arch-breakdown-col">
-          <!-- Sequential Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-green"></span> 🟢 Happy Path Journey</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-start">Start Event</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Submit Proposal (User)</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Validate Rules (Service)</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">Valid? (XOR)</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Screen Scope (Coordinator)</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-end">To Plagiarism Check</span>
-            </div>
-          </div>
-
-          <!-- Alternate Detour Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-orange"></span> 🟠 Alternate Detour: Incomplete Fields (F1)</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-task">Validate Rules</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">Incomplete</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Resolve Defect (User)</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">Retry &lt; 2?</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Re-Validate Rules</span>
-            </div>
-          </div>
-
-          <!-- Exception Fatal Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-red"></span> 🔴 Exception End: Invalid Team Composition (F2)</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-task">Validate Rules</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">Duplicate Student ID</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-fail">Error End Event (Rejected - F2)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="speaker-notes-box">
-        <div class="speaker-notes-header">🎤 Presenter Script (Say this out loud)</div>
-        <div class="speaker-notes-text">"Notice the 14-day boundary timer attached to the submission task (F4). If students delay beyond the semester deadline, the timer catches it and routes to coordinator approval. If the team violates basic rules (like a student appearing on two teams), an Error End Event (F2) terminates the process immediately, saving faculty review time."</div>
-      </div>
-    </section>
-
-    <!-- ========================================================
-         SLIDE 7: Project 1 - Step 2 Deep Dive: Plagiarism & Committee
-         ======================================================== -->
-    <section class="slide" data-category="p1">
-      <div class="slide-header">
-        <h1 class="slide-title">Project 1 &bull; Step 2: Plagiarism Detection & Committee Evaluation</h1>
-        <p class="slide-subtitle">Similarity Scan, Duplicate Adjudication, Panel Scoring, and Emergency HoD Escalation</p>
-      </div>
-
-      <div class="split-showcase">
-        <div class="diagram-visual-box">
-          <div class="diagram-header-bar">
-            <span class="diagram-title"><span class="badge-dot badge-orange"></span> Step 2 BPMN Crop</span>
-            <button class="diagram-zoom-btn" onclick="openLightbox('images/p1_phase2_evaluation.png', 'Step 2: Plagiarism & Committee Evaluation BPMN Flow')">Zoom</button>
-          </div>
-          <div class="diagram-img-wrap" onclick="openLightbox('images/p1_phase2_evaluation.png', 'Step 2: Plagiarism & Committee Evaluation BPMN Flow')">
-            <img src="images/p1_phase2_evaluation.png" alt="Step 2 BPMN Diagram">
-          </div>
-          <div class="diagram-callout-footer">
-            <span class="callout-pill task">Service Task</span>
-            <span class="callout-pill task">User Task</span>
-            <span class="callout-pill gateway">Exclusive Gateway</span>
-            <span class="callout-pill event">3d Warning Timer</span>
-            <span class="callout-pill event">7d Escalation Timer</span>
-          </div>
-        </div>
-
-        <div class="arch-breakdown-col">
-          <!-- Sequential Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-green"></span> 🟢 Happy Path Journey</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-task">Similarity Check (&le;30%)</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Evaluate Proposal (Panel)</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">Verdict: Approved</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-end">To Guide Allocation Sub-Process</span>
-            </div>
-          </div>
-
-          <!-- Alternate Detour Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-orange"></span> 🟠 Alternate Detour: Revision Loop (F5)</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-gateway">Verdict: Revision</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">Revision Cycles &lt; 2?</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Student 7-Day Update</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Re-Evaluate Proposal</span>
-            </div>
-          </div>
-
-          <!-- SLA Escalation Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-red"></span> 🔴 SLA Escalation: 7-Day Inactive Panel (F7)</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-task">Evaluate Proposal</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">7-Day Timer Breached</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">HoD Emergency Review & Binding Decision</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="speaker-notes-box">
-        <div class="speaker-notes-header">🎤 Presenter Script (Say this out loud)</div>
-        <div class="speaker-notes-text">"Notice how Camunda handles real-world delays: A 3-day non-interrupting timer sends an email reminder to the committee without disturbing their task. But if 7 days pass, an interrupting boundary timer snatches the task away from the committee and moves it to the Head of Department's lane for an emergency direct review."</div>
-      </div>
-    </section>
-
-    <!-- ========================================================
-         SLIDE 8: Project 1 - Step 3 Deep Dive: Guide Allocation & Compensation
-         ======================================================== -->
-    <section class="slide" data-category="p1">
-      <div class="slide-header">
-        <h1 class="slide-title">Project 1 &bull; Step 3: Guide Allocation & Quota Rollback</h1>
-        <p class="slide-subtitle">DMN Execution, Invitation SLA Timers, Coordinator Override, and Transaction Compensation</p>
-      </div>
-
-      <div class="split-showcase">
-        <div class="diagram-visual-box">
-          <div class="diagram-header-bar">
-            <span class="diagram-title"><span class="badge-dot badge-orange"></span> Step 3 BPMN Crop</span>
-            <button class="diagram-zoom-btn" onclick="openLightbox('images/p1_phase3_allocation.png', 'Step 3: Guide Allocation Sub-Process BPMN Flow')">Zoom</button>
-          </div>
-          <div class="diagram-img-wrap" onclick="openLightbox('images/p1_phase3_allocation.png', 'Step 3: Guide Allocation Sub-Process BPMN Flow')">
-            <img src="images/p1_phase3_allocation.png" alt="Step 3 BPMN Diagram">
-          </div>
-          <div class="diagram-callout-footer">
-            <span class="callout-pill task">Business Rule Task</span>
-            <span class="callout-pill task">Send Task</span>
-            <span class="callout-pill task">User Task</span>
-            <span class="callout-pill event">3d Guide Timeout</span>
-            <span class="callout-pill event">Compensation Event</span>
-          </div>
-        </div>
-
-        <div class="arch-breakdown-col">
-          <!-- Sequential Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-green"></span> 🟢 Happy Path Journey</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-task">DMN Guide Matching</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Reserve Slot</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Send Request</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Guide Accepts (User)</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-end">Formally Confirmed End</span>
-            </div>
-          </div>
-
-          <!-- Alternate Detour Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-orange"></span> 🟠 Alternate Detour: Guide Declined or Timed Out (F9)</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-task">Send Request</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">Declined / 3d Timeout</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">Attempts &lt; 3?</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Invite Alternate Guide</span>
-            </div>
-          </div>
-
-          <!-- Compensation Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-red"></span> 🔴 Transaction Compensation: Student Withdrawal (F11)</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-task">Allocation Finalized</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">Team Withdrawal Message</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-fail">Compensation Handler Rolls Back Quota</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="speaker-notes-box">
-        <div class="speaker-notes-header">🎤 Presenter Script (Say this out loud)</div>
-        <div class="speaker-notes-text">"Look at the bottom of the sub-process: What happens if a student team disbands 2 weeks later? An ordinary workflow would leave the professor's quota locked at 3! But in our model, a Boundary Message Event triggers a BPMN Intermediate Compensation Throw, which automatically decrements the professor's assigned count in the database so they can take another team."</div>
-      </div>
-    </section>
-
-    <!-- ========================================================
-         SLIDE 9: Project 1 - Full Complex BPMN 2.0 Diagram & Walkthrough
-         ======================================================== -->
-    <section class="slide" data-category="p1">
-      <div class="slide-header">
-        <h1 class="slide-title">Project 1: The Complete Complex BPMN 2.0 Diagram</h1>
-        <p class="slide-subtitle">Now That All Building Blocks Are Clear &bull; Full 5-Swimlane Orchestration View</p>
+        <h1 class="slide-title">Project 1: The Real Complex BPMN 2.0 Diagram</h1>
+        <p class="slide-subtitle">Complete Process Orchestration across 5 Swimlanes in Camunda Modeler</p>
       </div>
 
       <div class="full-diagram-box">
@@ -680,14 +381,302 @@
         </div>
       </div>
 
-      <div class="speaker-notes-box">
-        <div class="speaker-notes-header">🎤 Presenter Script (Say this out loud)</div>
-        <div class="speaker-notes-text">"And here is the complete orchestration in Camunda Modeler. You can see how each lane has strict separation of duties. Data flows from Student &rarr; System &rarr; Coordinator &rarr; Committee &rarr; Sub-Process &rarr; Faculty Guide &rarr; and terminates at 'Project Allocated & Formally Confirmed'. Every failure scenario has an explicit boundary catch."</div>
+      <div class="speaker-cue-box">
+        <div class="speaker-cue-title">🎤 Presenter Script (Say this out loud)</div>
+        <div class="speaker-cue-text">"And here is the complete orchestration in Camunda Modeler. You can see how each lane has strict separation of duties. Data flows from Student &rarr; System &rarr; Coordinator &rarr; Committee &rarr; Sub-Process &rarr; Faculty Guide &rarr; and terminates at 'Project Allocated & Formally Confirmed'. Every failure scenario has an explicit boundary catch."</div>
       </div>
     </section>
 
     <!-- ========================================================
-         SLIDE 10: Project 2 - Problem Statement & Simple 5-Step Demo Flow
+         SLIDE 6: Project 1 - Step 1 Deep Dive: Intake & Screening
+         ======================================================== -->
+    <section class="slide" data-category="p1">
+      <div class="slide-header">
+        <h1 class="slide-title">Project 1 &bull; Step 1: Proposal Intake & Eligibility Screening</h1>
+        <p class="slide-subtitle">Student Registration, Automated Team Validation, Defect Loops, and Coordinator Gatekeeping</p>
+      </div>
+
+      <div class="split-showcase">
+        <div class="diagram-visual-box">
+          <div class="diagram-header-bar">
+            <span class="diagram-title"><span class="badge-dot badge-orange"></span> Step 1 BPMN Crop</span>
+            <button class="diagram-zoom-btn" onclick="openLightbox('images/p1_phase1_intake.png', 'Step 1: Proposal Intake & Screening BPMN Flow')">Zoom</button>
+          </div>
+          <div class="diagram-img-wrap" onclick="openLightbox('images/p1_phase1_intake.png', 'Step 1: Proposal Intake & Screening BPMN Flow')">
+            <img src="images/p1_phase1_intake.png" alt="Step 1 BPMN Diagram">
+          </div>
+          <div class="diagram-callout-footer">
+            <span class="callout-pill trigger">Start Event</span>
+            <span class="callout-pill task">User Task</span>
+            <span class="callout-pill task">Service Task</span>
+            <span class="callout-pill gateway">Exclusive Gateway</span>
+            <span class="callout-pill event">14d Boundary Timer</span>
+            <span class="callout-pill event">Error End Event</span>
+          </div>
+        </div>
+
+        <div class="arch-breakdown-col">
+          <!-- Flow Explanation -->
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-orange"></span> Flow Explanation from Diagram</div>
+            <div class="arch-card-content">
+              Process begins at <strong>Team Decides to Submit Proposal</strong>. The student fills the submission form. A system <strong>Service Task</strong> verifies team constraints (size 2-4 and unique student IDs). If fields are incomplete, a loop allows the team to correct them. If valid, the Coordinator conducts scope screening.
+            </div>
+          </div>
+
+          <!-- Task Types -->
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-indigo"></span> Task Types Used (Why Chosen?)</div>
+            <div class="arch-list">
+              <div class="arch-item"><span class="arch-item-tag tag-user">User Task</span><div><strong>Submit Project Proposal:</strong> Human input required to enter research synopsis.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-service">Service Task</span><div><strong>Validate Form & Team Rules (F1, F2):</strong> Automated Java delegate checking DB constraints in milliseconds.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-user">User Task</span><div><strong>Resolve Validation Defect (F1):</strong> Student corrects incomplete fields.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-user">User Task</span><div><strong>Screen Proposal Scope:</strong> Coordinator confirms prerequisite eligibility.</div></div>
+            </div>
+          </div>
+
+          <!-- Gateways & Events -->
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-green"></span> Gateways & Boundary Events</div>
+            <div class="arch-list">
+              <div class="arch-item"><span class="arch-item-tag tag-xor">XOR Gateway</span><div><strong>Validation Result?:</strong> Directs flow to Valid, Incomplete, or Exceeded.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-xor">XOR Gateway</span><div><strong>Retry Count &lt; 2? (F1):</strong> Loop guard preventing infinite defect resubmissions.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-timer">Boundary Timer</span><div><strong>14-Day Deadline (F4):</strong> Routes late submissions to coordinator review.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-error">Boundary Error</span><div><strong>System/DB Error (F10):</strong> Catches DB connection failures & triggers Fallback Logger.</div></div>
+            </div>
+          </div>
+
+          <!-- Sequential Path Journeys -->
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-green"></span> 🟢 Happy Path (Golden Path)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-start">Start</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Submit Proposal</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Validate Rules</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-gateway">Valid</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Coordinator Screen</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-end">To Plagiarism Scan</span>
+            </div>
+          </div>
+
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-orange"></span> 🟠 Alternate Path: Incomplete Fields (F1)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-task">Validate Rules</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-gateway">Incomplete</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Resolve Defect</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-gateway">Retry &lt; 2?</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Re-Validate</span>
+            </div>
+          </div>
+
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-red"></span> 🔴 Exception Path: Invalid Team Composition (F2)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-task">Validate Rules</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-gateway">Duplicate Roll No</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-fail">Error End Event (Rejected - F2)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="speaker-cue-box">
+        <div class="speaker-cue-title">🎤 Presenter Script (Say this out loud)</div>
+        <div class="speaker-cue-text">"Notice the 14-day boundary timer attached to the submission task (F4). If students delay beyond the semester deadline, the timer catches it and routes to coordinator approval. If the team violates basic rules (like a student appearing on two teams), an Error End Event (F2) terminates the process immediately, saving faculty review time."</div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SLIDE 7: Project 1 - Step 2 Deep Dive: Plagiarism & Committee
+         ======================================================== -->
+    <section class="slide" data-category="p1">
+      <div class="slide-header">
+        <h1 class="slide-title">Project 1 &bull; Step 2: Plagiarism Detection & Committee Evaluation</h1>
+        <p class="slide-subtitle">Similarity Scan, Duplicate Adjudication, Panel Scoring, and Emergency HoD Escalation</p>
+      </div>
+
+      <div class="split-showcase">
+        <div class="diagram-visual-box">
+          <div class="diagram-header-bar">
+            <span class="diagram-title"><span class="badge-dot badge-orange"></span> Step 2 BPMN Crop</span>
+            <button class="diagram-zoom-btn" onclick="openLightbox('images/p1_phase2_evaluation.png', 'Step 2: Plagiarism & Committee Evaluation BPMN Flow')">Zoom</button>
+          </div>
+          <div class="diagram-img-wrap" onclick="openLightbox('images/p1_phase2_evaluation.png', 'Step 2: Plagiarism & Committee Evaluation BPMN Flow')">
+            <img src="images/p1_phase2_evaluation.png" alt="Step 2 BPMN Diagram">
+          </div>
+          <div class="diagram-callout-footer">
+            <span class="callout-pill task">Service Task</span>
+            <span class="callout-pill task">User Task</span>
+            <span class="callout-pill gateway">Exclusive Gateway</span>
+            <span class="callout-pill event">3d Warning Timer</span>
+            <span class="callout-pill event">7d Escalation Timer</span>
+          </div>
+        </div>
+
+        <div class="arch-breakdown-col">
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-orange"></span> Flow Explanation from Diagram</div>
+            <div class="arch-card-content">
+              Service task checks topic similarity. If &gt; 30%, coordinator reviews for duplicate flags. Clean proposals move to the Review Committee. If panel takes &gt; 3 days, a reminder triggers. If &gt; 7 days, an interrupting timer shifts authority directly to the Head of Department (HoD).
+            </div>
+          </div>
+
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-indigo"></span> Task Types Used (Why Chosen?)</div>
+            <div class="arch-list">
+              <div class="arch-item"><span class="arch-item-tag tag-service">Service Task</span><div><strong>Check Plagiarism (F3):</strong> Automated algorithm scanning Turnitin/Internal archives.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-user">User Task</span><div><strong>Review Plagiarism Report:</strong> Coordinator human judgement on high matches.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-user">User Task</span><div><strong>Evaluate Proposal:</strong> 3-member committee enters rubric scores.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-user">User Task</span><div><strong>HoD Emergency Review (F7):</strong> Department head breaks evaluation deadlock.</div></div>
+            </div>
+          </div>
+
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-green"></span> Gateways & Boundary Events</div>
+            <div class="arch-list">
+              <div class="arch-item"><span class="arch-item-tag tag-xor">XOR Gateway</span><div><strong>Similarity &gt; 30%?:</strong> Routes high match to coordinator review.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-xor">XOR Gateway</span><div><strong>Committee Verdict?:</strong> Tri-way branch: Approved, Revision, or Rejected.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-timer">Non-Interrupting Timer</span><div><strong>3-Day Warning:</strong> Dispatches email reminder without halting task.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-timer">Interrupting Timer</span><div><strong>7-Day SLA Breached:</strong> Cancels committee task and escalates to HoD.</div></div>
+            </div>
+          </div>
+
+          <!-- Sequential Path Journeys -->
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-green"></span> 🟢 Happy Path (Direct Approval)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-task">Similarity &le;30%</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Committee Review</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-gateway">Approved</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-end">To Guide Sub-Process</span>
+            </div>
+          </div>
+
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-orange"></span> 🟠 Alternate Path: Revision Loop (F5)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-task">Committee Review</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-gateway">Revision</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-gateway">Cycles &lt; 2?</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Student 7d Resubmit</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Re-Evaluate</span>
+            </div>
+          </div>
+
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-red"></span> 🔴 Escalation Path: 7-Day Inactive Panel (F7)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-task">Committee Review</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-event">7d Timer Breached</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">HoD Emergency Review & Binding Verdict</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="speaker-cue-box">
+        <div class="speaker-cue-title">🎤 Presenter Script (Say this out loud)</div>
+        <div class="speaker-cue-text">"Notice how Camunda handles real-world delays: A 3-day non-interrupting timer sends an email reminder to the committee without disturbing their task. But if 7 days pass, an interrupting boundary timer snatches the task away from the committee and moves it to the Head of Department's lane for an emergency direct review."</div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SLIDE 8: Project 1 - Step 3 Deep Dive: Guide Allocation & Compensation
+         ======================================================== -->
+    <section class="slide" data-category="p1">
+      <div class="slide-header">
+        <h1 class="slide-title">Project 1 &bull; Step 3: Guide Allocation & Quota Rollback</h1>
+        <p class="slide-subtitle">DMN Execution, Invitation SLA Timers, Coordinator Override, and Transaction Compensation</p>
+      </div>
+
+      <div class="split-showcase">
+        <div class="diagram-visual-box">
+          <div class="diagram-header-bar">
+            <span class="diagram-title"><span class="badge-dot badge-orange"></span> Step 3 BPMN Crop</span>
+            <button class="diagram-zoom-btn" onclick="openLightbox('images/p1_phase3_allocation.png', 'Step 3: Guide Allocation Sub-Process BPMN Flow')">Zoom</button>
+          </div>
+          <div class="diagram-img-wrap" onclick="openLightbox('images/p1_phase3_allocation.png', 'Step 3: Guide Allocation Sub-Process BPMN Flow')">
+            <img src="images/p1_phase3_allocation.png" alt="Step 3 BPMN Diagram">
+          </div>
+          <div class="diagram-callout-footer">
+            <span class="callout-pill task">Business Rule Task</span>
+            <span class="callout-pill task">Send Task</span>
+            <span class="callout-pill task">User Task</span>
+            <span class="callout-pill event">3d Guide Timeout</span>
+            <span class="callout-pill event">Compensation Event</span>
+          </div>
+        </div>
+
+        <div class="arch-breakdown-col">
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-orange"></span> Flow Explanation from Diagram</div>
+            <div class="arch-card-content">
+              Approved project enters guide allocation sub-process. Business rule task evaluates DMN table. Guide has 3 days to accept. If declined or timed out, system invites alternate faculty (up to 3 times) before falling back to manual coordinator assignment. Student withdrawal triggers compensation to release quota.
+            </div>
+          </div>
+
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-indigo"></span> Task Types Used (Why Chosen?)</div>
+            <div class="arch-list">
+              <div class="arch-item"><span class="arch-item-tag tag-rule">Business Rule Task</span><div><strong>Evaluate Guide Match:</strong> Executes external DMN decision table.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-send">Send Task</span><div><strong>Send Allocation Request:</strong> Asynchronous email dispatch to faculty inbox.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-user">User Task</span><div><strong>Accept/Decline Request:</strong> Professor confirms or declines slot.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-user">User Task</span><div><strong>Coordinator Manual Allocation:</strong> Fallback assignment when retries fail.</div></div>
+            </div>
+          </div>
+
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-green"></span> Gateways & Boundary Events</div>
+            <div class="arch-list">
+              <div class="arch-item"><span class="arch-item-tag tag-xor">XOR Gateway</span><div><strong>Guide Available?:</strong> Match found vs. Manual allocation fallback.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-xor">XOR Gateway</span><div><strong>Guide Attempts &lt; 3?:</strong> Bounded retry loop for reassignment.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-timer">Boundary Timer</span><div><strong>3-Day Guide Timeout:</strong> Auto-reassigns task if faculty ignores invite.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-comp">Compensation Throw</span><div><strong>Compensate Guide Quota:</strong> Restores quota if team disbands later.</div></div>
+            </div>
+          </div>
+
+          <!-- Sequential Path Journeys -->
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-green"></span> 🟢 Happy Path (First-Choice Acceptance)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-task">DMN Match</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Reserve Slot</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Send Request</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Guide Accepts</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-end">Formally Confirmed</span>
+            </div>
+          </div>
+
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-orange"></span> 🟠 Alternate Path: Guide Declines / 3d Timeout (F9)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-task">Send Request</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-event">Declined / 3d Timeout</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-gateway">Attempts &lt; 3?</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Invite Alternate Guide</span>
+            </div>
+          </div>
+
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-red"></span> 🔴 Transaction Compensation: Student Withdrawal (F11)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-task">Allocation Confirmed</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-event">Team Withdrawal Message</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-fail">Compensation Event Rolls Back Quota in DB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="speaker-cue-box">
+        <div class="speaker-cue-title">🎤 Presenter Script (Say this out loud)</div>
+        <div class="speaker-cue-text">"Look at the bottom of the sub-process: What happens if a student team disbands 2 weeks later? An ordinary workflow would leave the professor's quota locked at 3! But in our model, a Boundary Message Event triggers a BPMN Intermediate Compensation Throw, which automatically decrements the professor's assigned count in the database so they can take another team."</div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SLIDE 9: Project 2 - Problem Statement & Simple 5-Step Demo Flow
          ======================================================== -->
     <section class="slide" data-category="p2">
       <div class="slide-header">
@@ -695,42 +684,55 @@
         <p class="slide-subtitle">Retail Banking Loan Origination System &bull; The High-Level 30-Second Mental Model</p>
       </div>
 
-      <!-- Problem Statement Banner -->
-      <div class="problem-box">
-        <div class="problem-icon-badge" style="background: #4f46e5;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-        </div>
-        <div class="problem-content">
-          <div class="problem-tag-label" style="color: #4338ca;">The Real-World Problem We Are Solving</div>
-          <div class="problem-text" style="color: #1e1b4b;">
-            Traditional retail bank lending takes 2 to 3 weeks of manual paperwork. Verifying identity, pulling credit bureau scores, and checking AML sanction lists happen sequentially, leading to high drop-offs. If Core Banking fails during disbursement, manual reconciliations risk double-debits. <strong>This workflow synchronizes parallel checks and automates underwriting & disbursement.</strong>
+      <!-- Pain vs Solution Grid -->
+      <div class="pain-solution-grid">
+        <div class="pain-box">
+          <div class="pain-box-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+            Manual Pain Points (Why Banks Lose Customers)
           </div>
+          <ul class="pain-list">
+            <li>&bull; <strong>2 to 3 Week Turnaround:</strong> Sequential reviews cause high applicant drop-off.</li>
+            <li>&bull; <strong>Disjointed Fraud Checks:</strong> AML screening happens late, wasting underwriter time.</li>
+            <li>&bull; <strong>Rigid Declines:</strong> High DTI applicants are rejected instead of offered adjusted terms.</li>
+            <li>&bull; <strong>Disbursement Glitches:</strong> Payment gateway timeouts risk double debits or lost funds.</li>
+          </ul>
+        </div>
+
+        <div class="solution-box">
+          <div class="solution-box-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            Camunda Automated Solution
+          </div>
+          <ul class="solution-list">
+            <li>&bull; <strong>4-Way Parallel Due Diligence:</strong> e-KYC, CIBIL, AML & Income execute simultaneously in &lt;45s.</li>
+            <li>&bull; <strong>AML Kill Switch:</strong> Sanctions hit terminates all parallel tokens immediately.</li>
+            <li>&bull; <strong>Intelligent Counter-Offers:</strong> DMN triggers adjusted loan terms for high DTI.</li>
+            <li>&bull; <strong>Transactional Sub-Process:</strong> CBS disbursement with automatic operational holds.</li>
+          </ul>
         </div>
       </div>
 
       <!-- Horizontal Stepper (Simple 5-Step Demo Flow) -->
       <div class="demo-stepper">
-        <!-- Step 1 -->
         <div class="demo-step-card step-p2">
           <div class="step-num-pill">1</div>
           <div class="step-title">Customer Applies</div>
-          <div class="step-desc">Applicant enters loan amount, term, KYC proof, and income documents through online banking.</div>
+          <div class="step-desc">Applicant enters loan amount, tenure, KYC proof, and income documents online.</div>
           <span class="step-actor-tag actor-student">Applicant Pool</span>
         </div>
 
         <div class="step-arrow-divider">&rarr;</div>
 
-        <!-- Step 2 -->
         <div class="demo-step-card step-p2">
           <div class="step-num-pill">2</div>
           <div class="step-title">4-Way Parallel Due Diligence</div>
-          <div class="step-desc">Bank forks simultaneous API calls: e-KYC, CIBIL bureau pull, AML sanctions, and income review.</div>
+          <div class="step-desc">Bank forks simultaneous API calls: e-KYC, CIBIL bureau, AML sanctions, and income review.</div>
           <span class="step-actor-tag actor-system">Parallel Split/Join</span>
         </div>
 
         <div class="step-arrow-divider">&rarr;</div>
 
-        <!-- Step 3 -->
         <div class="demo-step-card step-p2">
           <div class="step-num-pill">3</div>
           <div class="step-title">DMN Credit Scoring</div>
@@ -740,7 +742,6 @@
 
         <div class="step-arrow-divider">&rarr;</div>
 
-        <!-- Step 4 -->
         <div class="demo-step-card step-p2">
           <div class="step-num-pill">4</div>
           <div class="step-title">Underwriting & Sanction</div>
@@ -750,7 +751,6 @@
 
         <div class="step-arrow-divider">&rarr;</div>
 
-        <!-- Step 5 -->
         <div class="demo-step-card step-p2">
           <div class="step-num-pill">5</div>
           <div class="step-title">E-Sign & CBS Disbursement</div>
@@ -759,14 +759,14 @@
         </div>
       </div>
 
-      <div class="speaker-notes-box">
-        <div class="speaker-notes-header">🎤 Presenter Script (Say this out loud)</div>
-        <div class="speaker-notes-text">"In retail banking, speed wins customers. Instead of waiting 10 days for four different departments to review a loan sequentially, our BPMN model runs KYC, Credit Bureau, AML, and Income assessment simultaneously in 4 parallel streams. In under 45 seconds, the customer has a credit decision."</div>
+      <div class="speaker-cue-box">
+        <div class="speaker-cue-title">🎤 Presenter Script (Say this out loud)</div>
+        <div class="speaker-cue-text">"In retail banking, speed wins customers. Instead of waiting 10 days for four different departments to review a loan sequentially, our BPMN model runs KYC, Credit Bureau, AML, and Income assessment simultaneously in 4 parallel streams. In under 45 seconds, the customer has a credit decision."</div>
       </div>
     </section>
 
     <!-- ========================================================
-         SLIDE 11: Project 2 - User Forms in Action
+         SLIDE 10: Project 2 - User Forms in Action
          ======================================================== -->
     <section class="slide" data-category="p2">
       <div class="slide-header">
@@ -788,11 +788,11 @@
             <img src="images/p2_application_form.png" alt="Loan Application Form">
           </div>
           <div class="form-fields-meta">
-            <div class="meta-label">Captured Form Fields</div>
-            <span class="form-field-pill">Applicant Full Name</span>
-            <span class="form-field-pill">Requested Loan Amount ($)</span>
-            <span class="form-field-pill">Tenure in Months</span>
-            <span class="form-field-pill">Monthly Net Income ($)</span>
+            <div class="meta-label">Captured Form Fields & Input Constraints</div>
+            <span class="form-field-pill">Applicant Full Name (Text)</span>
+            <span class="form-field-pill">Requested Loan Amount ($ USD)</span>
+            <span class="form-field-pill">Requested Tenure (Months: 12 to 84)</span>
+            <span class="form-field-pill">Monthly Net Income ($ USD)</span>
             <span class="form-field-pill">Employment Type (Salaried/Self)</span>
             <span class="form-field-pill">Identity & Address Document Uploads</span>
           </div>
@@ -811,25 +811,25 @@
             <img src="images/p2_underwriter_form.png" alt="Underwriter Assessment Form">
           </div>
           <div class="form-fields-meta">
-            <div class="meta-label">Captured Form Fields</div>
-            <span class="form-field-pill">Calculated CIBIL & DTI (Readonly)</span>
-            <span class="form-field-pill">Risk Tier Recommendation</span>
-            <span class="form-field-pill">Sanction Decision: Approve / Counter / Reject</span>
+            <div class="meta-label">Captured Form Fields & Decision Options</div>
+            <span class="form-field-pill">Calculated CIBIL & DTI (Read-only verified)</span>
+            <span class="form-field-pill">Risk Tier Recommendation (Tier A/B/C/Decline)</span>
+            <span class="form-field-pill">Sanction Verdict: Approve / Counter / Reject</span>
             <span class="form-field-pill">Approved Loan Quantum ($)</span>
             <span class="form-field-pill">Applicable Interest Rate (%)</span>
-            <span class="form-field-pill">Underwriter Notes & Justification</span>
+            <span class="form-field-pill">Underwriter Notes & Justification (Textarea)</span>
           </div>
         </div>
       </div>
 
-      <div class="speaker-notes-box">
-        <div class="speaker-notes-header">🎤 Presenter Script (Say this out loud)</div>
-        <div class="speaker-notes-text">"Notice how the underwriter form displays pre-calculated CIBIL scores and Debt-to-Income ratios as read-only verified attributes. The human underwriter cannot manipulate the credit score; they can only evaluate policy exceptions and set interest rates."</div>
+      <div class="speaker-cue-box">
+        <div class="speaker-cue-title">🎤 Presenter Script (Say this out loud)</div>
+        <div class="speaker-cue-text">"Notice how the underwriter form displays pre-calculated CIBIL scores and Debt-to-Income ratios as read-only verified attributes. The human underwriter cannot manipulate the credit score; they can only evaluate policy exceptions and set interest rates."</div>
       </div>
     </section>
 
     <!-- ========================================================
-         SLIDE 12: Project 2 - DMN Decision Brain
+         SLIDE 11: Project 2 - DMN Decision Brain
          ======================================================== -->
     <section class="slide" data-category="p2">
       <div class="slide-header">
@@ -898,327 +898,19 @@
         </div>
       </div>
 
-      <div class="speaker-notes-box">
-        <div class="speaker-notes-header">🎤 Presenter Script (Say this out loud)</div>
-        <div class="speaker-notes-text">"Notice how Rule 3 handles high DTI: Instead of outright declining a customer whose debt ratio exceeds 45%, the DMN triggers a Counter-Offer. The bank can offer a lower loan amount or request a guarantor, preserving the customer relationship while protecting the bank's credit risk."</div>
+      <div class="speaker-cue-box">
+        <div class="speaker-cue-title">🎤 Presenter Script (Say this out loud)</div>
+        <div class="speaker-cue-text">"Notice how Rule 3 handles high DTI: Instead of outright declining a customer whose debt ratio exceeds 45%, the DMN triggers a Counter-Offer. The bank can offer a lower loan amount or request a guarantor, preserving the customer relationship while protecting the bank's credit risk."</div>
       </div>
     </section>
 
     <!-- ========================================================
-         SLIDE 13: Project 2 - BPMN Elements Master Key (The Visual Alphabet)
+         SLIDE 12: Project 2 - Full Complex BPMN 2.0 Diagram
          ======================================================== -->
     <section class="slide" data-category="p2">
       <div class="slide-header">
-        <h1 class="slide-title">Project 2 &bull; BPMN Elements Master Key (The Visual Alphabet)</h1>
-        <p class="slide-subtitle">Understand Every Task Type, Parallel Gateway, and Terminate Event Before Inspecting the Diagram</p>
-      </div>
-
-      <div class="elements-master-grid">
-        <!-- Element 1: Parallel Gateway (AND) -->
-        <div class="element-master-card">
-          <div class="element-master-top">
-            <div class="element-bpmn-icon icon-and">➕</div>
-            <span class="element-master-name">Parallel Gateway (AND)</span>
-          </div>
-          <div class="element-master-why">
-            <strong>Why used:</strong> Forks process into 4 concurrent verification streams (KYC, Bureau, AML, Income) and waits as a join barrier until ALL 4 finish.
-          </div>
-          <div class="element-master-camunda">
-            <strong>Camunda Execution:</strong> Spawns 4 concurrent execution tokens; join gateway synchronizes tokens before continuing.
-          </div>
-        </div>
-
-        <!-- Element 2: Send & Receive Tasks -->
-        <div class="element-master-card">
-          <div class="element-master-top">
-            <div class="element-bpmn-icon icon-send">✉️</div>
-            <span class="element-master-name">Send & Receive Tasks</span>
-          </div>
-          <div class="element-master-why">
-            <strong>Why used:</strong> Asynchronous B2C messaging between Bank pool and Applicant pool (Dispatch Loan Offer & Await Customer Handshake).
-          </div>
-          <div class="element-master-camunda">
-            <strong>Camunda Execution:</strong> Send Task publishes message event; Receive Task subscribes to correlation ID matching customer.
-          </div>
-        </div>
-
-        <!-- Element 3: Terminate End Event -->
-        <div class="element-master-card">
-          <div class="element-master-top">
-            <div class="element-bpmn-icon icon-error">🛑</div>
-            <span class="element-master-name">Terminate End Event</span>
-          </div>
-          <div class="element-master-why">
-            <strong>Why used:</strong> Anti-Money Laundering (AML) kill switch! If a sanctions hit occurs, it terminates ALL active parallel tokens immediately.
-          </div>
-          <div class="element-master-camunda">
-            <strong>Camunda Execution:</strong> Instantly destroys the entire root process instance and cancels all running tasks across lanes.
-          </div>
-        </div>
-
-        <!-- Element 4: Error Boundary Event -->
-        <div class="element-master-card">
-          <div class="element-master-top">
-            <div class="element-bpmn-icon icon-error">⚡</div>
-            <span class="element-master-name">Error Boundary Event</span>
-          </div>
-          <div class="element-master-why">
-            <strong>Why used:</strong> Catches 502/504 REST timeouts from external Credit Bureau or Payment Gateways and triggers automated retry loops.
-          </div>
-          <div class="element-master-camunda">
-            <strong>Camunda Execution:</strong> Intercepts BPMN Error codes (`BPMN_ERR_BUREAU_DOWN`) and diverts flow to retry delegate.
-          </div>
-        </div>
-
-        <!-- Element 5: Transactional Sub-Process -->
-        <div class="element-master-card">
-          <div class="element-master-top">
-            <div class="element-bpmn-icon icon-comp">📦</div>
-            <span class="element-master-name">Transactional Sub-Process</span>
-          </div>
-          <div class="element-master-why">
-            <strong>Why used:</strong> Wraps penny-drop validation, Core Banking ledger creation, and NEFT transfer in an ACID-safe boundary.
-          </div>
-          <div class="element-master-camunda">
-            <strong>Camunda Execution:</strong> If payment fails, all internal steps roll back and route to an Operations hold queue.
-          </div>
-        </div>
-
-        <!-- Element 6: Compensation Throw Event -->
-        <div class="element-master-card">
-          <div class="element-master-top">
-            <div class="element-bpmn-icon icon-comp">↩️</div>
-            <span class="element-master-name">Compensation Handler</span>
-          </div>
-          <div class="element-master-why">
-            <strong>Why used:</strong> If applicant cancels after sanction letter issuance, compensation refunds their $150 processing fee automatically.
-          </div>
-          <div class="element-master-camunda">
-            <strong>Camunda Execution:</strong> Executes attached compensation service task to credit customer account and close ledger.
-          </div>
-        </div>
-      </div>
-
-      <div class="speaker-notes-box">
-        <div class="speaker-notes-header">🎤 Presenter Script (Say this out loud)</div>
-        <div class="speaker-notes-text">"Take special note of the Terminate End Event vs. an ordinary End Event: If someone is flagged on an international terrorist watchlist (AML), an ordinary end event would only close that one branch while the other 3 branches continue! The Terminate End Event kills the entire loan instance instantly across all lanes."</div>
-      </div>
-    </section>
-
-    <!-- ========================================================
-         SLIDE 14: Project 2 - Step 1 Deep Dive: Intake & Parallel Verifications
-         ======================================================== -->
-    <section class="slide" data-category="p2">
-      <div class="slide-header">
-        <h1 class="slide-title">Project 2 &bull; Step 1: Intake & 4-Way Parallel Due Diligence</h1>
-        <p class="slide-subtitle">Document Completeness, Fork/Join Synchronization, and Anti-Financial Crime Protection</p>
-      </div>
-
-      <div class="split-showcase">
-        <div class="diagram-visual-box">
-          <div class="diagram-header-bar">
-            <span class="diagram-title"><span class="badge-dot badge-indigo"></span> Step 1 BPMN Crop</span>
-            <button class="diagram-zoom-btn" onclick="openLightbox('images/p2_phase1_parallel.png', 'Step 1: Intake & Parallel Due Diligence BPMN Flow')">Zoom</button>
-          </div>
-          <div class="diagram-img-wrap" onclick="openLightbox('images/p2_phase1_parallel.png', 'Step 1: Intake & Parallel Due Diligence BPMN Flow')">
-            <img src="images/p2_phase1_parallel.png" alt="Step 1 BPMN Diagram">
-          </div>
-          <div class="diagram-callout-footer">
-            <span class="callout-pill trigger">Message Start</span>
-            <span class="callout-pill gateway">Parallel Split (AND)</span>
-            <span class="callout-pill task">Service Tasks</span>
-            <span class="callout-pill event">7d Resubmission Timer</span>
-            <span class="callout-pill event">Bureau 504 Error</span>
-            <span class="callout-pill event">AML Terminate End</span>
-          </div>
-        </div>
-
-        <div class="arch-breakdown-col">
-          <!-- Sequential Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-green"></span> 🟢 Happy Path Journey</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-start">Message Start</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Check Docs</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">Parallel Split (4 Streams)</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">Synchronize Join</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-end">To DMN Credit Scoring</span>
-            </div>
-          </div>
-
-          <!-- Alternate Detour Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-orange"></span> 🟠 Alternate Detour: Biometric Mismatch & Manual KYC (L2)</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-task">e-KYC API</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">KYC Mismatch</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Manual Video-KYC (User)</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">Approved &rarr; Re-joins Barrier</span>
-            </div>
-          </div>
-
-          <!-- Sanctions Kill Switch Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-red"></span> 🔴 Compliance Kill Switch: AML Sanctions Match (L3)</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-task">AML Watchlist API</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">Hit Detected</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-fail">Terminate End Event (All Branches Killed)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="speaker-notes-box">
-        <div class="speaker-notes-header">🎤 Presenter Script (Say this out loud)</div>
-        <div class="speaker-notes-text">"Look at the Parallel Join Gateway: Camunda holds the execution token until all 4 verification streams finish. If Credit Bureau takes 2 seconds, KYC takes 3 seconds, and Income Verification takes 20 seconds, the join barrier synchronizes all data before letting the file proceed to underwriting."</div>
-      </div>
-    </section>
-
-    <!-- ========================================================
-         SLIDE 15: Project 2 - Step 2 Deep Dive: Risk Scoring & Underwriting
-         ======================================================== -->
-    <section class="slide" data-category="p2">
-      <div class="slide-header">
-        <h1 class="slide-title">Project 2 &bull; Step 2: DMN Risk Scoring & Credit Underwriting</h1>
-        <p class="slide-subtitle">Multi-Table Credit Matrix, Counter-Offer Negotiation, High-Value Escalation, and Collateral Inspection</p>
-      </div>
-
-      <div class="split-showcase">
-        <div class="diagram-visual-box">
-          <div class="diagram-header-bar">
-            <span class="diagram-title"><span class="badge-dot badge-indigo"></span> Step 2 BPMN Crop</span>
-            <button class="diagram-zoom-btn" onclick="openLightbox('images/p2_phase2_underwriting.png', 'Step 2: DMN Risk Scoring & Underwriting BPMN Flow')">Zoom</button>
-          </div>
-          <div class="diagram-img-wrap" onclick="openLightbox('images/p2_phase2_underwriting.png', 'Step 2: DMN Risk Scoring & Underwriting BPMN Flow')">
-            <img src="images/p2_phase2_underwriting.png" alt="Step 2 BPMN Diagram">
-          </div>
-          <div class="diagram-callout-footer">
-            <span class="callout-pill task">Business Rule Task</span>
-            <span class="callout-pill task">User Task</span>
-            <span class="callout-pill gateway">Exclusive Gateway</span>
-            <span class="callout-pill event">48h Committee Timer</span>
-          </div>
-        </div>
-
-        <div class="arch-breakdown-col">
-          <!-- Sequential Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-green"></span> 🟢 Happy Path Journey (Tier A Prime)</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-task">DMN Risk Scoring</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">Tier A Auto-Approve</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Generate Sanction Letter</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-end">To Customer Offer Dispatch</span>
-            </div>
-          </div>
-
-          <!-- Counter Offer Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-orange"></span> 🟠 Alternate Detour: High DTI Counter-Offer (L5, L6)</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-gateway">High DTI (&gt;45%)</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Formulate Counter-Offer</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">Applicant Accepts?</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Proceeds to Sanction</span>
-            </div>
-          </div>
-
-          <!-- Committee Escalation Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-indigo"></span> 🔵 High-Value Escalation: Loans &gt; $100,000 (L7)</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-gateway">Loan &gt; $100k</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Senior Credit Committee (Dual Sign-off)</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">48h SLA Timer Guard</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="speaker-notes-box">
-        <div class="speaker-notes-header">🎤 Presenter Script (Say this out loud)</div>
-        <div class="speaker-notes-text">"Notice the 48-hour SLA boundary timer attached to the Senior Credit Committee task (L7). If senior executives do not sign off on loans exceeding $100,000 within 48 hours, the timer escalates the file directly to the Chief Risk Officer to prevent commercial deal stalls."</div>
-      </div>
-    </section>
-
-    <!-- ========================================================
-         SLIDE 16: Project 2 - Step 3 Deep Dive: Offer, E-Sign & Disbursement
-         ======================================================== -->
-    <section class="slide" data-category="p2">
-      <div class="slide-header">
-        <h1 class="slide-title">Project 2 &bull; Step 3: Offer Acceptance, E-Sign & CBS Disbursement</h1>
-        <p class="slide-subtitle">Message Choreography, 48h Legal Signature SLA, Core Banking Sub-Process, and Reversal Compensation</p>
-      </div>
-
-      <div class="split-showcase">
-        <div class="diagram-visual-box">
-          <div class="diagram-header-bar">
-            <span class="diagram-title"><span class="badge-dot badge-indigo"></span> Step 3 BPMN Crop</span>
-            <button class="diagram-zoom-btn" onclick="openLightbox('images/p2_phase3_disbursement.png', 'Step 3: Offer Acceptance, E-Sign & CBS Disbursement BPMN Flow')">Zoom</button>
-          </div>
-          <div class="diagram-img-wrap" onclick="openLightbox('images/p2_phase3_disbursement.png', 'Step 3: Offer Acceptance, E-Sign & CBS Disbursement BPMN Flow')">
-            <img src="images/p2_phase3_disbursement.png" alt="Step 3 BPMN Diagram">
-          </div>
-          <div class="diagram-callout-footer">
-            <span class="callout-pill task">Send Task</span>
-            <span class="callout-pill task">Receive Task</span>
-            <span class="callout-pill task">User Task</span>
-            <span class="callout-pill event">15d Validity Timer</span>
-            <span class="callout-pill event">48h E-Sign Timer</span>
-            <span class="callout-pill event">Compensation Event</span>
-            <span class="callout-pill event">Gateway Error Hold</span>
-          </div>
-        </div>
-
-        <div class="arch-breakdown-col">
-          <!-- Sequential Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-green"></span> 🟢 Happy Path Journey</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-task">Send Offer</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Receive Acceptance</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">E-Sign (&lt;48h)</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">CBS Ledger Open</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-end">NEFT Fund Disbursed</span>
-            </div>
-          </div>
-
-          <!-- Gateway Error Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-orange"></span> 🟠 Fault Tolerance: Payment Gateway Error 502 (L12)</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-task">CBS Transfer</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">502 Timeout Error</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-task">Hold Funds & Rectify (Ops User Task)</span>
-            </div>
-          </div>
-
-          <!-- Compensation Journey Box -->
-          <div class="path-journey-box">
-            <div class="path-journey-header"><span class="badge-dot badge-red"></span> 🔴 Transaction Compensation: Applicant Withdrawal (L10)</div>
-            <div class="path-journey-steps">
-              <span class="journey-node node-task">Offer Dispatched</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-gateway">Customer Cancels</span> <span class="journey-arrow">&rarr;</span>
-              <span class="journey-node node-fail">Compensation Event Refunds $150 Fee</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="speaker-notes-box">
-        <div class="speaker-notes-header">🎤 Presenter Script (Say this out loud)</div>
-        <div class="speaker-notes-text">"Why is the Core Banking disbursement wrapped in a Sub-Process? Because bank transfers cannot simply 'fail'. If a 502 Bad Gateway occurs during NEFT transfer, an Error Boundary Event catches it and holds the funds in an Operations queue. This guarantees that money is never lost and never debited twice."</div>
-      </div>
-    </section>
-
-    <!-- ========================================================
-         SLIDE 17: Project 2 - Full Complex BPMN 2.0 Diagram & Walkthrough
-         ======================================================== -->
-    <section class="slide" data-category="p2">
-      <div class="slide-header">
-        <h1 class="slide-title">Project 2: The Complete Complex BPMN 2.0 Choreography</h1>
-        <p class="slide-subtitle">Now That All Building Blocks Are Clear &bull; 2 Pools, 4 Lanes & External Bureau</p>
+        <h1 class="slide-title">Project 2: The Real Complex BPMN 2.0 Diagram</h1>
+        <p class="slide-subtitle">Multi-Pool Collaboration Choreography in Camunda Modeler</p>
       </div>
 
       <div class="full-diagram-box">
@@ -1258,14 +950,296 @@
         </div>
       </div>
 
-      <div class="speaker-notes-box">
-        <div class="speaker-notes-header">🎤 Presenter Script (Say this out loud)</div>
-        <div class="speaker-notes-text">"And here is the complete banking choreography. Notice the dotted message flows passing between the white Applicant Pool and the dark Bank Pool. This proves compliance with enterprise microservice architecture: the customer portal is decoupled from the bank's core engine, exchanging only asynchronous BPMN messages."</div>
+      <div class="speaker-cue-box">
+        <div class="speaker-cue-title">🎤 Presenter Script (Say this out loud)</div>
+        <div class="speaker-cue-text">"And here is the complete banking choreography. Notice the dotted message flows passing between the white Applicant Pool and the dark Bank Pool. This proves compliance with enterprise microservice architecture: the customer portal is decoupled from the bank's core engine, exchanging only asynchronous BPMN messages."</div>
       </div>
     </section>
 
     <!-- ========================================================
-         SLIDE 18: Master Architecture Synthesis & Defense Checklist
+         SLIDE 13: Project 2 - Step 1 Deep Dive: Intake & Parallel Verifications
+         ======================================================== -->
+    <section class="slide" data-category="p2">
+      <div class="slide-header">
+        <h1 class="slide-title">Project 2 &bull; Step 1: Intake & 4-Way Parallel Due Diligence</h1>
+        <p class="slide-subtitle">Document Completeness, Fork/Join Synchronization, and Anti-Financial Crime Protection</p>
+      </div>
+
+      <div class="split-showcase">
+        <div class="diagram-visual-box">
+          <div class="diagram-header-bar">
+            <span class="diagram-title"><span class="badge-dot badge-indigo"></span> Step 1 BPMN Crop</span>
+            <button class="diagram-zoom-btn" onclick="openLightbox('images/p2_phase1_parallel.png', 'Step 1: Intake & Parallel Due Diligence BPMN Flow')">Zoom</button>
+          </div>
+          <div class="diagram-img-wrap" onclick="openLightbox('images/p2_phase1_parallel.png', 'Step 1: Intake & Parallel Due Diligence BPMN Flow')">
+            <img src="images/p2_phase1_parallel.png" alt="Step 1 BPMN Diagram">
+          </div>
+          <div class="diagram-callout-footer">
+            <span class="callout-pill trigger">Message Start</span>
+            <span class="callout-pill gateway">Parallel Split (AND)</span>
+            <span class="callout-pill task">Service Tasks</span>
+            <span class="callout-pill event">7d Resubmission Timer</span>
+            <span class="callout-pill event">Bureau 504 Error</span>
+            <span class="callout-pill event">AML Terminate End</span>
+          </div>
+        </div>
+
+        <div class="arch-breakdown-col">
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-orange"></span> Flow Explanation from Diagram</div>
+            <div class="arch-card-content">
+              Applicant submits application. DMN checks document completeness. Once valid, a <strong>Parallel Gateway Split</strong> branches into 4 simultaneous tracks: e-KYC, Credit Bureau pull, AML watchlist screening, and Income assessment. A <strong>Parallel Join Gateway</strong> ensures all 4 complete before underwriting.
+            </div>
+          </div>
+
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-indigo"></span> Task Types Used (Why Chosen?)</div>
+            <div class="arch-list">
+              <div class="arch-item"><span class="arch-item-tag tag-rule">Business Rule Task</span><div><strong>Check Document Completeness:</strong> Automated DMN checking uploads.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-service">Service Tasks</span><div><strong>Automated KYC, Bureau Pull & AML:</strong> Simultaneous REST calls executing in parallel.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-user">User Task</span><div><strong>Verify Income & Employer:</strong> Credit analyst auditing pay slips.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-user">User Task</span><div><strong>Manual KYC & Bio Review:</strong> Compliance officer fallback for biometric errors.</div></div>
+            </div>
+          </div>
+
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-green"></span> Gateways & Boundary Events</div>
+            <div class="arch-list">
+              <div class="arch-item"><span class="arch-item-tag tag-and">Parallel Gateways</span><div><strong>Fork Streams & Synchronize Join:</strong> Concurrency barrier ensuring all 4 finish.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-timer">Boundary Timer</span><div><strong>7-Day Window Lapsed:</strong> Auto-lapses stale missing doc tasks.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-error">Boundary Error</span><div><strong>Bureau Timeout:</strong> Catches 504 network errors & retries 3 times.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-fail">Terminate End Event</span><div><strong>AML Sanctions Hit:</strong> Instantly kills ALL active concurrent tokens.</div></div>
+            </div>
+          </div>
+
+          <!-- Sequential Path Journeys -->
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-green"></span> 🟢 Happy Path (Parallel Clearance)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-start">Message Start</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Check Docs</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-gateway">Parallel Split (4 Streams)</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-gateway">Synchronize Join</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-end">To DMN Credit Scoring</span>
+            </div>
+          </div>
+
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-orange"></span> 🟠 Alternate Path: Biometric Mismatch & Manual KYC (L2)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-task">e-KYC API</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-gateway">KYC Mismatch</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Manual Video-KYC</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-gateway">Approved &rarr; Re-joins Barrier</span>
+            </div>
+          </div>
+
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-red"></span> 🔴 Compliance Kill Switch: AML Sanctions Hit (L3)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-task">AML Watchlist API</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-gateway">Hit Detected</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-fail">Terminate End Event (All Branches Killed)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="speaker-cue-box">
+        <div class="speaker-cue-title">🎤 Presenter Script (Say this out loud)</div>
+        <div class="speaker-cue-text">"Take special note of the Terminate End Event vs. an ordinary End Event: If someone is flagged on an international terrorist watchlist (AML), an ordinary end event would only close that one branch while the other 3 branches continue! The Terminate End Event kills the entire loan instance instantly across all lanes."</div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SLIDE 14: Project 2 - Step 2 Deep Dive: Risk Scoring & Underwriting
+         ======================================================== -->
+    <section class="slide" data-category="p2">
+      <div class="slide-header">
+        <h1 class="slide-title">Project 2 &bull; Step 2: DMN Risk Scoring & Credit Underwriting</h1>
+        <p class="slide-subtitle">Multi-Table Credit Matrix, Counter-Offer Negotiation, High-Value Escalation, and Collateral Inspection</p>
+      </div>
+
+      <div class="split-showcase">
+        <div class="diagram-visual-box">
+          <div class="diagram-header-bar">
+            <span class="diagram-title"><span class="badge-dot badge-indigo"></span> Step 2 BPMN Crop</span>
+            <button class="diagram-zoom-btn" onclick="openLightbox('images/p2_phase2_underwriting.png', 'Step 2: DMN Risk Scoring & Underwriting BPMN Flow')">Zoom</button>
+          </div>
+          <div class="diagram-img-wrap" onclick="openLightbox('images/p2_phase2_underwriting.png', 'Step 2: DMN Risk Scoring & Underwriting BPMN Flow')">
+            <img src="images/p2_phase2_underwriting.png" alt="Step 2 BPMN Diagram">
+          </div>
+          <div class="diagram-callout-footer">
+            <span class="callout-pill task">Business Rule Task</span>
+            <span class="callout-pill task">User Task</span>
+            <span class="callout-pill gateway">Exclusive Gateway</span>
+            <span class="callout-pill event">48h Committee Timer</span>
+          </div>
+        </div>
+
+        <div class="arch-breakdown-col">
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-orange"></span> Flow Explanation from Diagram</div>
+            <div class="arch-card-content">
+              DMN engine evaluates CIBIL (&ge;750) and DTI (&le;40%). Results branch into: Auto-Approve, Counter-Offer (for high DTI), Borderline Referral to underwriter, or Outright Decline. For secured loans, collateral inspection confirms clear title and LTV &le; 80%.
+            </div>
+          </div>
+
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-indigo"></span> Task Types Used (Why Chosen?)</div>
+            <div class="arch-list">
+              <div class="arch-item"><span class="arch-item-tag tag-rule">Business Rule Task</span><div><strong>DMN Risk Tier Calculation:</strong> Automated policy evaluation.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-user">User Task</span><div><strong>Formulate Counter-Offer:</strong> Loan officer restructures terms for high DTI.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-user">User Task</span><div><strong>Credit Underwriter Review:</strong> Discretionary approval for borderline files.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-user">User Task</span><div><strong>Senior Committee Deliberation:</strong> Dual executive signoff for loans &gt;$100k.</div></div>
+            </div>
+          </div>
+
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-green"></span> Gateways & Boundary Events</div>
+            <div class="arch-list">
+              <div class="arch-item"><span class="arch-item-tag tag-xor">XOR Gateway</span><div><strong>Credit Policy Route?:</strong> Multi-way branch: Approved, Counter, Borderline, Reject.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-xor">XOR Gateway</span><div><strong>Counter-Offer Accepted?:</strong> Bounded loop (max 1 counter-offer allowed).</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-xor">XOR Gateway</span><div><strong>Title & LTV Acceptable?:</strong> Property appraisal clearance check.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-timer">Boundary Timer</span><div><strong>48h Committee SLA:</strong> Escalates stalled high-value files to CRO.</div></div>
+            </div>
+          </div>
+
+          <!-- Sequential Path Journeys -->
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-green"></span> 🟢 Happy Path (Tier A Prime)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-task">DMN Risk Scoring</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-gateway">Tier A Auto-Approve</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Generate Sanction Letter</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-end">To Customer Offer Dispatch</span>
+            </div>
+          </div>
+
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-orange"></span> 🟠 Alternate Path: High DTI Counter-Offer (L5, L6)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-gateway">High DTI (&gt;45%)</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Formulate Counter-Offer</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-gateway">Applicant Accepts?</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Proceeds to Sanction</span>
+            </div>
+          </div>
+
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-indigo"></span> 🔵 High-Value Escalation: Loans &gt; $100,000 (L7)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-gateway">Loan &gt; $100k</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Senior Committee (Dual Sign-off)</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-gateway">48h SLA Guard</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="speaker-cue-box">
+        <div class="speaker-cue-title">🎤 Presenter Script (Say this out loud)</div>
+        <div class="speaker-cue-text">"Notice the 48-hour SLA boundary timer attached to the Senior Credit Committee task (L7). If senior executives do not sign off on loans exceeding $100,000 within 48 hours, the timer escalates the file directly to the Chief Risk Officer to prevent commercial deal stalls."</div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SLIDE 15: Project 2 - Step 3 Deep Dive: Offer, E-Sign & Disbursement
+         ======================================================== -->
+    <section class="slide" data-category="p2">
+      <div class="slide-header">
+        <h1 class="slide-title">Project 2 &bull; Step 3: Offer Acceptance, E-Sign & CBS Disbursement</h1>
+        <p class="slide-subtitle">Message Choreography, 48h Legal Signature SLA, Core Banking Sub-Process, and Reversal Compensation</p>
+      </div>
+
+      <div class="split-showcase">
+        <div class="diagram-visual-box">
+          <div class="diagram-header-bar">
+            <span class="diagram-title"><span class="badge-dot badge-indigo"></span> Step 3 BPMN Crop</span>
+            <button class="diagram-zoom-btn" onclick="openLightbox('images/p2_phase3_disbursement.png', 'Step 3: Offer Acceptance, E-Sign & CBS Disbursement BPMN Flow')">Zoom</button>
+          </div>
+          <div class="diagram-img-wrap" onclick="openLightbox('images/p2_phase3_disbursement.png', 'Step 3: Offer Acceptance, E-Sign & CBS Disbursement BPMN Flow')">
+            <img src="images/p2_phase3_disbursement.png" alt="Step 3 BPMN Diagram">
+          </div>
+          <div class="diagram-callout-footer">
+            <span class="callout-pill task">Send Task</span>
+            <span class="callout-pill task">Receive Task</span>
+            <span class="callout-pill task">User Task</span>
+            <span class="callout-pill event">15d Validity Timer</span>
+            <span class="callout-pill event">48h E-Sign Timer</span>
+            <span class="callout-pill event">Compensation Event</span>
+            <span class="callout-pill event">Gateway Error Hold</span>
+          </div>
+        </div>
+
+        <div class="arch-breakdown-col">
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-orange"></span> Flow Explanation from Diagram</div>
+            <div class="arch-card-content">
+              Bank sends Sanction Letter via <strong>Send Task</strong>. Applicant has 15 days to accept, followed by 48 hours to complete biometric digital signature. On signing, the <strong>Disbursement Sub-Process</strong> triggers: penny-drop validation, CBS ledger creation, and automated NEFT transfer. Gateway errors route to Ops hold queue.
+            </div>
+          </div>
+
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-indigo"></span> Task Types Used (Why Chosen?)</div>
+            <div class="arch-list">
+              <div class="arch-item"><span class="arch-item-tag tag-send">Send Task</span><div><strong>Dispatch Loan Offer:</strong> Asynchronous message to external customer pool.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-receive">Receive Task</span><div><strong>Receive Offer Decision:</strong> Correlates customer acceptance handshake.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-user">User Task</span><div><strong>E-Sign Loan Agreement:</strong> Aadhaar/DocuSign cryptographic signing.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-service">Service Tasks</span><div><strong>Disbursement Sub-Process:</strong> Penny drop, CBS ledger, NEFT transfer.</div></div>
+            </div>
+          </div>
+
+          <div class="arch-card">
+            <div class="arch-card-header"><span class="badge-dot badge-green"></span> Gateways & Boundary Events</div>
+            <div class="arch-list">
+              <div class="arch-item"><span class="arch-item-tag tag-timer">Boundary Timer</span><div><strong>15-Day Offer Validity:</strong> Releases credit reservation on expiry.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-timer">Boundary Timer</span><div><strong>48h E-Sign Timeout:</strong> Cancels offer if unsigned within legal SLA.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-comp">Compensation Throw</span><div><strong>Compensate Processing Fee:</strong> Refunds fee if applicant withdraws.</div></div>
+              <div class="arch-item"><span class="arch-item-tag tag-error">Boundary Error</span><div><strong>Gateway Error (L12):</strong> Catches CBS failure & routes to Ops hold.</div></div>
+            </div>
+          </div>
+
+          <!-- Sequential Path Journeys -->
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-green"></span> 🟢 Happy Path (Instant Disbursement)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-task">Send Offer</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Receive Acceptance</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">E-Sign (&lt;48h)</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">CBS Ledger Open</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-end">NEFT Fund Disbursed</span>
+            </div>
+          </div>
+
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-orange"></span> 🟠 Fault Tolerance: Payment Gateway Error 502 (L12)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-task">CBS Transfer</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-gateway">502 Timeout Error</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-task">Hold Funds & Rectify (Ops User Task)</span>
+            </div>
+          </div>
+
+          <div class="path-journey-box">
+            <div class="path-journey-header"><span class="badge-dot badge-red"></span> 🔴 Transaction Compensation: Applicant Withdrawal (L10)</div>
+            <div class="path-journey-steps">
+              <span class="journey-node node-task">Offer Dispatched</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-event">Customer Cancels</span> <span class="journey-arrow">&rarr;</span>
+              <span class="journey-node node-fail">Compensation Event Refunds $150 Fee</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="speaker-cue-box">
+        <div class="speaker-cue-title">🎤 Presenter Script (Say this out loud)</div>
+        <div class="speaker-cue-text">"Why is the Core Banking disbursement wrapped in a Sub-Process? Because bank transfers cannot simply 'fail'. If a 502 Bad Gateway occurs during NEFT transfer, an Error Boundary Event catches it and holds the funds in an Operations queue. This guarantees that money is never lost and never debited twice."</div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SLIDE 16: Master Architecture Synthesis Matrix
          ======================================================== -->
     <section class="slide" data-category="matrix">
       <div class="slide-header">
@@ -1278,11 +1252,15 @@
         <div class="pill-card theme-orange">
           <div class="pill-header">
             <div class="icon-circle">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
             </div>
             <span class="title-text">Q: Why Use DMN Instead of Code?</span>
           </div>
           <p class="card-desc"><strong>Answer:</strong> Hardcoding if-else statements in Java requires recompiling and redeploying the entire workflow for every policy change. DMN externalizes decision rules into a visual table that risk managers or academic chairs can edit directly at runtime without redeployment.</p>
+          <div class="meta-group">
+            <div class="meta-label">Demonstrated In</div>
+            <div class="meta-value">Project 1: Guide Quotas &bull; Project 2: Credit Scoring</div>
+          </div>
         </div>
 
         <!-- Viva Q2 -->
@@ -1294,6 +1272,10 @@
             <span class="title-text">Q: How Are Loops Prevented?</span>
           </div>
           <p class="card-desc"><strong>Answer:</strong> Both models enforce finite iteration guards using retry counter gateways. Project 1 restricts revision cycles to &le; 2 and guide invitations to &le; 3. Project 2 restricts counter-offers to &le; 1. If limits are exceeded, the process routes to an executive escalation or rejection.</p>
+          <div class="meta-group">
+            <div class="meta-label">Demonstrated In</div>
+            <div class="meta-value">Gateways F1, F5, F9 in P1 &bull; Gateway L5/L6 in P2</div>
+          </div>
         </div>
 
         <!-- Viva Q3 -->
@@ -1305,12 +1287,16 @@
             <span class="title-text">Q: What is Compensation in BPMN?</span>
           </div>
           <p class="card-desc"><strong>Answer:</strong> Unlike an error catch that aborts a task, BPMN Compensation performs business state rollback for already-completed activities. When a student withdraws or a loan is cancelled, compensation automatically frees reserved guide quotas and refunds origination fees.</p>
+          <div class="meta-group">
+            <div class="meta-label">Demonstrated In</div>
+            <div class="meta-value">Event F11 in P1 &bull; Event L10 in P2</div>
+          </div>
         </div>
       </div>
 
-      <div class="speaker-notes-box">
-        <div class="speaker-notes-header">🎤 Presenter Script (Say this out loud)</div>
-        <div class="speaker-notes-text">"To conclude: Both processes comply 100% with OMG BPMN 2.0 and DMN 1.3 standards. They combine human task forms, automated service delegates, deterministic DMN tables, parallel processing, and transactional compensation to deliver production-grade resilience on the Camunda 7 engine."</div>
+      <div class="speaker-cue-box">
+        <div class="speaker-cue-title">🎤 Presenter Script (Say this out loud)</div>
+        <div class="speaker-cue-text">"To conclude: Both processes comply 100% with OMG BPMN 2.0 and DMN 1.3 standards. They combine human task forms, automated service delegates, deterministic DMN tables, parallel processing, and transactional compensation to deliver production-grade resilience on the Camunda 7 engine."</div>
       </div>
     </section>
 
