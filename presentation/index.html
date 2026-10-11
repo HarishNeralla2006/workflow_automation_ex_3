@@ -354,7 +354,9 @@
               </div>
             </div>
 
-            <!-- Task Types -->
+            <!-- Side-by-Side Dual Card Row: Task Types & Gateways -->
+            <div class="arch-card-dual-row">
+<!-- Task Types -->
             <div class="arch-card">
               <div class="arch-card-header"><span class="badge-dot badge-indigo"></span> Task Types Used (Why Chosen?)</div>
               <div class="arch-list">
@@ -370,42 +372,46 @@
               <div class="arch-card-header"><span class="badge-dot badge-green"></span> Gateways &amp; Boundary Events</div>
               <div class="arch-list">
                 <div class="arch-item"><span class="arch-item-tag tag-xor">XOR Gateway</span><div><strong>Validation Result?:</strong> Routes to Valid, Incomplete, or Retries Exceeded.</div></div>
+            </div>
                 <div class="arch-item"><span class="arch-item-tag tag-xor">XOR Gateway</span><div><strong>Retry Count &lt; 2? (F1):</strong> Loop limiter preventing endless resubmissions.</div></div>
                 <div class="arch-item"><span class="arch-item-tag tag-timer">Boundary Timer</span><div><strong>14-Day Deadline (F4):</strong> Routes late submissions to coordinator review.</div></div>
                 <div class="arch-item"><span class="arch-item-tag tag-error">Boundary Error</span><div><strong>System/DB Error (F10):</strong> Catches DB connection failures &amp; triggers Fallback Logger.</div></div>
               </div>
             </div>
 
-            <!-- Sequential Path Journeys (NO EMOJIS) -->
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-green"></span> Happy Path (Golden Path)</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-start">Start</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Submit Proposal</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Validate Rules</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-gateway">Valid</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Coordinator Screen</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-end">To Plagiarism Scan</span>
-              </div>
-            </div>
-
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-amber"></span> Alternate Path: Incomplete Fields (F1)</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-task">Validate Rules</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-gateway">Incomplete</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Resolve Defect</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-gateway">Retry &lt; 2?</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Re-Validate</span>
-              </div>
-            </div>
-
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-red"></span> Exception Path: Invalid Team Composition (F2)</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-task">Validate Rules</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-gateway">Duplicate Roll No</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-fail">Error End Event (Rejected - F2)</span>
+            <!-- End-to-End Execution Paths (Compact Single Card) -->
+            <div class="arch-card">
+              <div class="arch-card-header"><span class="badge-dot badge-green"></span> Execution Paths &amp; Routing</div>
+              <div class="path-chain-list">
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-happy">Happy Path:</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-start">Start</span> &rarr;
+                    <span class="journey-node node-task">Submit Proposal</span> &rarr;
+                    <span class="journey-node node-task">Validate Rules</span> &rarr;
+                    <span class="journey-node node-gateway">Valid</span> &rarr;
+                    <span class="journey-node node-task">Coordinator Screen</span> &rarr;
+                    <span class="journey-node node-end">To Plagiarism Scan</span>
+                  </div>
+                </div>
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-alt">Alternate (F1):</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-task">Validate</span> &rarr;
+                    <span class="journey-node node-gateway">Incomplete</span> &rarr;
+                    <span class="journey-node node-task">Fix Defect</span> &rarr;
+                    <span class="journey-node node-gateway">Retry &lt; 2?</span> &rarr;
+                    <span class="journey-node node-task">Re-Validate</span>
+                  </div>
+                </div>
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-exc">Exception (F2):</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-task">Validate</span> &rarr;
+                    <span class="journey-node node-gateway">Duplicate Roll</span> &rarr;
+                    <span class="journey-node node-fail">Error End (Rejected - F2)</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -449,7 +455,9 @@
               </div>
             </div>
 
-            <!-- Task Types -->
+            <!-- Side-by-Side Dual Card Row: Task Types & Gateways -->
+            <div class="arch-card-dual-row">
+<!-- Task Types -->
             <div class="arch-card">
               <div class="arch-card-header"><span class="badge-dot badge-indigo"></span> Task Types Used (Why Chosen?)</div>
               <div class="arch-list">
@@ -465,40 +473,44 @@
               <div class="arch-card-header"><span class="badge-dot badge-green"></span> Gateways &amp; Boundary Events</div>
               <div class="arch-list">
                 <div class="arch-item"><span class="arch-item-tag tag-xor">XOR Gateway</span><div><strong>Verdict? (F5):</strong> 3-way branch: Approved, Needs Revision, or Rejected.</div></div>
+            </div>
                 <div class="arch-item"><span class="arch-item-tag tag-timer">Non-interrupting Timer</span><div><strong>PT72H Reminder:</strong> Fires notification without canceling the committee review task.</div></div>
                 <div class="arch-item"><span class="arch-item-tag tag-timer">Interrupting Timer</span><div><strong>P7D Escalation:</strong> Cancels review task &amp; reassigns case directly to HoD.</div></div>
                 <div class="arch-item"><span class="arch-item-tag tag-xor">XOR Gateway</span><div><strong>Revision Count &le; 2?:</strong> Strict guard preventing infinite student revisions.</div></div>
               </div>
             </div>
 
-            <!-- Sequential Path Journeys (NO EMOJIS) -->
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-green"></span> Happy Path (Approved Directly)</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-task">Plagiarism Check</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-gateway">&lt; 30% Match</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Committee Score</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-gateway">Approved</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-end">To Guide Allocation</span>
-              </div>
-            </div>
-
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-amber"></span> Alternate Path: Revision Cycle Loop (F5)</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-gateway">Verdict: Revise</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Update Proposal</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-gateway">Revision &le; 2?</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Re-evaluate</span>
-              </div>
-            </div>
-
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-red"></span> Exception Path: Rejection / Lapsed (>2 Revisions)</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-gateway">Revisions &gt; 2</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Send Rejection Notice</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-fail">End Event: Proposal Rejected</span>
+            <!-- End-to-End Execution Paths (Compact Single Card) -->
+            <div class="arch-card">
+              <div class="arch-card-header"><span class="badge-dot badge-green"></span> Execution Paths &amp; Routing</div>
+              <div class="path-chain-list">
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-happy">Happy Path:</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-task">Plagiarism Check</span> &rarr;
+                    <span class="journey-node node-gateway">&lt; 30% Match</span> &rarr;
+                    <span class="journey-node node-task">Committee Score</span> &rarr;
+                    <span class="journey-node node-gateway">Approved</span> &rarr;
+                    <span class="journey-node node-end">To Guide Allocation</span>
+                  </div>
+                </div>
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-alt">Alternate (F5):</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-gateway">Revise</span> &rarr;
+                    <span class="journey-node node-task">Update Proposal</span> &rarr;
+                    <span class="journey-node node-gateway">Revision &le; 2?</span> &rarr;
+                    <span class="journey-node node-task">Re-evaluate</span>
+                  </div>
+                </div>
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-exc">Exception (F7):</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-event">7d Timeout</span> &rarr;
+                    <span class="journey-node node-task">HoD Override</span> &rarr;
+                    <span class="journey-node node-fail">Rejection or Force Allocation</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -541,7 +553,9 @@
               </div>
             </div>
 
-            <!-- Task Types -->
+            <!-- Side-by-Side Dual Card Row: Task Types & Gateways -->
+            <div class="arch-card-dual-row">
+<!-- Task Types -->
             <div class="arch-card">
               <div class="arch-card-header"><span class="badge-dot badge-indigo"></span> Task Types Used (Why Chosen?)</div>
               <div class="arch-list">
@@ -557,41 +571,44 @@
               <div class="arch-card-header"><span class="badge-dot badge-green"></span> Gateways &amp; Boundary Events</div>
               <div class="arch-list">
                 <div class="arch-item"><span class="arch-item-tag tag-timer">Boundary Timer</span><div><strong>PT72H Acceptance SLA (F9):</strong> Reallocates proposal to second-ranked guide on expiry.</div></div>
+            </div>
                 <div class="arch-item"><span class="arch-item-tag tag-error">Boundary Error</span><div><strong>Guide Declined:</strong> Catches explicit rejection &amp; triggers fallback matching loop.</div></div>
                 <div class="arch-item"><span class="arch-item-tag tag-comp">Compensation Event</span><div><strong>Revert Quota (F11):</strong> Restores faculty availability count if student withdraws.</div></div>
                 <div class="arch-item"><span class="arch-item-tag tag-msg">Boundary Message</span><div><strong>Student Withdrawal:</strong> Catches student drop-out token before term commencement.</div></div>
               </div>
             </div>
 
-            <!-- Sequential Path Journeys (NO EMOJIS) -->
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-green"></span> Happy Path: Instant Match &amp; Acceptance</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-task">DMN Guide Match</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-gateway">Quota &lt; 3</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Send Invite</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Guide Accepts</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-end">Project Allocated Confirmed</span>
-              </div>
-            </div>
-
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-amber"></span> Alternate Path: Guide Timeout / Reallocation (F9)</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-event">72h Timer Fires</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Cancel Old Invite</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Re-query DMN (Rank 2)</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Dispatch New Invite</span>
-              </div>
-            </div>
-
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-red"></span> Exception Path: Student Withdrawal &amp; Quota Rollback (F11)</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-event">Withdrawal Message</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Trigger Compensation</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Revert Guide Slot (-1)</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-fail">End: Allocation Canceled</span>
+            <!-- End-to-End Execution Paths (Compact Single Card) -->
+            <div class="arch-card">
+              <div class="arch-card-header"><span class="badge-dot badge-green"></span> Execution Paths &amp; Routing</div>
+              <div class="path-chain-list">
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-happy">Happy Path:</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-task">DMN Match</span> &rarr;
+                    <span class="journey-node node-gateway">Quota &lt; 3</span> &rarr;
+                    <span class="journey-node node-task">Send Invite</span> &rarr;
+                    <span class="journey-node node-task">Guide Accepts</span> &rarr;
+                    <span class="journey-node node-end">Confirmed</span>
+                  </div>
+                </div>
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-alt">Alternate (F9):</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-event">72h Timeout</span> &rarr;
+                    <span class="journey-node node-task">Cancel Invite</span> &rarr;
+                    <span class="journey-node node-task">Re-query DMN Rank 2</span> &rarr;
+                    <span class="journey-node node-task">New Invite</span>
+                  </div>
+                </div>
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-exc">Rollback (F11):</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-event">Withdrawal Token</span> &rarr;
+                    <span class="journey-node node-task">Compensation Event</span> &rarr;
+                    <span class="journey-node node-fail">Revert Quota Slot (-1)</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -897,7 +914,9 @@
               </div>
             </div>
 
-            <!-- Task Types -->
+            <!-- Side-by-Side Dual Card Row: Task Types & Gateways -->
+            <div class="arch-card-dual-row">
+<!-- Task Types -->
             <div class="arch-card">
               <div class="arch-card-header"><span class="badge-dot badge-indigo"></span> Task Types Used (Why Chosen?)</div>
               <div class="arch-list">
@@ -913,41 +932,44 @@
               <div class="arch-card-header"><span class="badge-dot badge-green"></span> Gateways &amp; Boundary Events</div>
               <div class="arch-list">
                 <div class="arch-item"><span class="arch-item-tag tag-and">Parallel Gateway</span><div><strong>AND Split/Join:</strong> Forks 4 concurrent threads and synchronizes all before credit decision.</div></div>
+            </div>
                 <div class="arch-item"><span class="arch-item-tag tag-error">Boundary Error</span><div><strong>Bureau Unavailable (L4):</strong> Triggers circuit breaker and fallback bureau partner.</div></div>
                 <div class="arch-item"><span class="arch-item-tag tag-timer">Boundary Timer</span><div><strong>7-Day Document SLA (L1):</strong> Lapses stale applications with missing identity proofs.</div></div>
                 <div class="arch-item"><span class="arch-item-tag tag-error">Error End Event</span><div><strong>AML Kill Switch (L3):</strong> Terminating error that purges all parallel execution tokens.</div></div>
               </div>
             </div>
 
-            <!-- Sequential Path Journeys (NO EMOJIS) -->
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-green"></span> Happy Path: 4-Way Clean Verification</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-start">Message Start</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-gateway">Parallel Split</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">4 Concurrent Checks</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-gateway">Parallel Join</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-end">To DMN Credit Scoring</span>
-              </div>
-            </div>
-
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-amber"></span> Alternate Path: Bureau Down / Fallback Partner (L4)</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-task">Primary Bureau (CIBIL)</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-event">Timeout Error</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Secondary Bureau (Experian)</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-gateway">Join</span>
-              </div>
-            </div>
-
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-red"></span> Exception Path: AML Sanction Hit (L3 Kill Switch)</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-task">AML Watchlist Scan</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-gateway">Positive Match</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">File STR Report</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-fail">Error End: Application Terminated</span>
+            <!-- End-to-End Execution Paths (Compact Single Card) -->
+            <div class="arch-card">
+              <div class="arch-card-header"><span class="badge-dot badge-green"></span> Execution Paths &amp; Routing</div>
+              <div class="path-chain-list">
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-happy">Happy Path:</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-start">Start</span> &rarr;
+                    <span class="journey-node node-gateway">Parallel Split</span> &rarr;
+                    <span class="journey-node node-task">4 Concurrent Checks</span> &rarr;
+                    <span class="journey-node node-gateway">Parallel Join</span> &rarr;
+                    <span class="journey-node node-end">To DMN Scoring</span>
+                  </div>
+                </div>
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-alt">Alternate (L4):</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-task">CIBIL Bureau</span> &rarr;
+                    <span class="journey-node node-event">Timeout</span> &rarr;
+                    <span class="journey-node node-task">Experian Secondary</span> &rarr;
+                    <span class="journey-node node-gateway">Join</span>
+                  </div>
+                </div>
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-exc">Kill Switch (L3):</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-task">AML Hit</span> &rarr;
+                    <span class="journey-node node-task">STR Report</span> &rarr;
+                    <span class="journey-node node-fail">Error End: Terminate All Tokens</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -991,7 +1013,9 @@
               </div>
             </div>
 
-            <!-- Task Types -->
+            <!-- Side-by-Side Dual Card Row: Task Types & Gateways -->
+            <div class="arch-card-dual-row">
+<!-- Task Types -->
             <div class="arch-card">
               <div class="arch-card-header"><span class="badge-dot badge-indigo"></span> Task Types Used (Why Chosen?)</div>
               <div class="arch-list">
@@ -1007,41 +1031,41 @@
               <div class="arch-card-header"><span class="badge-dot badge-green"></span> Gateways &amp; Boundary Events</div>
               <div class="arch-list">
                 <div class="arch-item"><span class="arch-item-tag tag-xor">XOR Gateway</span><div><strong>Tier Routing:</strong> Branches to Auto-Approve, Manual Underwrite, or Counter-Offer.</div></div>
+            </div>
                 <div class="arch-item"><span class="arch-item-tag tag-xor">XOR Gateway</span><div><strong>Exposure &gt; $100k?:</strong> Directs large loans to Credit Committee approval.</div></div>
                 <div class="arch-item"><span class="arch-item-tag tag-error">Boundary Error</span><div><strong>Valuation Shortfall (L8):</strong> Catches collateral deficit &amp; trims maximum loan ceiling.</div></div>
                 <div class="arch-item"><span class="arch-item-tag tag-timer">Boundary Timer</span><div><strong>24h Review SLA:</strong> Alerts underwriting manager on stagnant high-priority files.</div></div>
               </div>
             </div>
 
-            <!-- Sequential Path Journeys (NO EMOJIS) -->
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-green"></span> Happy Path: Straight-Through Tier A Approval</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-task">DMN Scoring</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-gateway">Tier A</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Calculate EMI</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-end">To Offer Generation</span>
-              </div>
-            </div>
-
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-amber"></span> Alternate Path: DTI Counter-Offer (L5)</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-gateway">DTI &gt; 45%</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Reduce Principal / Extend Term</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Present Counter-Offer</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-gateway">Accepted?</span>
-              </div>
-            </div>
-
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-blue"></span> Alternate Path: High-Exposure Committee Review</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-task">Underwriter Approval</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-gateway">&gt; $100k</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Committee Review</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-gateway">Approved</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-end">To Offer Generation</span>
+            <!-- End-to-End Execution Paths (Compact Single Card) -->
+            <div class="arch-card">
+              <div class="arch-card-header"><span class="badge-dot badge-green"></span> Execution Paths &amp; Routing</div>
+              <div class="path-chain-list">
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-happy">Happy Path:</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-task">DMN Tier A</span> &rarr;
+                    <span class="journey-node node-task">Auto EMI</span> &rarr;
+                    <span class="journey-node node-end">Direct Offer Generation</span>
+                  </div>
+                </div>
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-alt">Counter-Offer (L5):</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-gateway">DTI &gt; 45%</span> &rarr;
+                    <span class="journey-node node-task">Extend Term</span> &rarr;
+                    <span class="journey-node node-task">Customer Review</span>
+                  </div>
+                </div>
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-exc">Committee (&gt;$100k):</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-gateway">High Exposure</span> &rarr;
+                    <span class="journey-node node-task">Dual Committee Sign-Off</span> &rarr;
+                    <span class="journey-node node-end">Offer</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1086,7 +1110,9 @@
               </div>
             </div>
 
-            <!-- Task Types -->
+            <!-- Side-by-Side Dual Card Row: Task Types & Gateways -->
+            <div class="arch-card-dual-row">
+<!-- Task Types -->
             <div class="arch-card">
               <div class="arch-card-header"><span class="badge-dot badge-indigo"></span> Task Types Used (Why Chosen?)</div>
               <div class="arch-list">
@@ -1102,41 +1128,43 @@
               <div class="arch-card-header"><span class="badge-dot badge-green"></span> Gateways &amp; Boundary Events</div>
               <div class="arch-list">
                 <div class="arch-item"><span class="arch-item-tag tag-timer">Boundary Timer</span><div><strong>14-Day Offer Expiry (L9):</strong> Automatically lapses unaccepted loan agreements.</div></div>
+            </div>
                 <div class="arch-item"><span class="arch-item-tag tag-timer">Boundary Timer</span><div><strong>48-Hour Signature SLA (L10):</strong> Escalates pending signatures to loan officer follow-up.</div></div>
                 <div class="arch-item"><span class="arch-item-tag tag-msg">Boundary Message</span><div><strong>Customer Withdrawal (L11):</strong> Handles explicit cancellation prior to fund release.</div></div>
                 <div class="arch-item"><span class="arch-item-tag tag-comp">Compensation Handler</span><div><strong>CBS Reversal (L12):</strong> ACID reversal ensuring clean double-entry general ledger books.</div></div>
               </div>
             </div>
 
-            <!-- Sequential Path Journeys (NO EMOJIS) -->
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-green"></span> Happy Path: Prompt E-Sign &amp; CBS Disbursement</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-task">Issue Offer</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Accept Offer</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">E-Sign Contract</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">CBS NEFT Transfer</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-end">Loan Disbursed</span>
-              </div>
-            </div>
-
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-amber"></span> Alternate Path: Offer Timeout / Lapsed (L9)</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-task">Issue Offer</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-event">14-Day Timer Fires</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Send Expiry Notice</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-fail">End: Offer Lapsed</span>
-              </div>
-            </div>
-
-            <div class="path-journey-box">
-              <div class="path-journey-header"><span class="badge-dot badge-red"></span> Exception Path: CBS Gateway Failure &amp; Compensation (L12)</div>
-              <div class="path-journey-steps">
-                <span class="journey-node node-task">CBS NEFT Call</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-event">Network Timeout Error</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Trigger Compensation</span> <span class="journey-arrow">&rarr;</span>
-                <span class="journey-node node-task">Reverse Hold &amp; Alert Ops</span>
+            <!-- End-to-End Execution Paths (Compact Single Card) -->
+            <div class="arch-card">
+              <div class="arch-card-header"><span class="badge-dot badge-green"></span> Execution Paths &amp; Routing</div>
+              <div class="path-chain-list">
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-happy">Happy Path:</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-task">Issue Offer</span> &rarr;
+                    <span class="journey-node node-task">Accept</span> &rarr;
+                    <span class="journey-node node-task">E-Sign</span> &rarr;
+                    <span class="journey-node node-task">CBS NEFT</span> &rarr;
+                    <span class="journey-node node-end">Disbursed</span>
+                  </div>
+                </div>
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-alt">Timeout (L9):</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-event">14d Timer</span> &rarr;
+                    <span class="journey-node node-task">Expiry Notice</span> &rarr;
+                    <span class="journey-node node-fail">Application Lapsed</span>
+                  </div>
+                </div>
+                <div class="path-chain-row">
+                  <span class="path-badge-tag tag-exc">CBS Reversal (L12):</span>
+                  <div class="path-nodes">
+                    <span class="journey-node node-event">NEFT Timeout</span> &rarr;
+                    <span class="journey-node node-task">Compensation Event</span> &rarr;
+                    <span class="journey-node node-fail">Reverse Hold &amp; Log</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
