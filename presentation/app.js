@@ -1,4 +1,6 @@
-// Presentation Deck Interactive Navigation Logic
+// Presentation Deck Interactive Navigation & Lightbox Zoom Logic
+
+let openLightbox, closeLightbox;
 
 document.addEventListener('DOMContentLoaded', () => {
   const slides = document.querySelectorAll('.slide');
@@ -9,6 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const progressBar = document.getElementById('progressBar');
   const projectBadge = document.getElementById('projectBadge');
   const dotsNav = document.getElementById('dotsNav');
+  const lightboxModal = document.getElementById('lightboxModal');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
 
   let currentIndex = 0;
   const totalSlides = slides.length;
@@ -94,6 +99,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Lightbox functions (exposed to window)
+  openLightbox = function(src, caption) {
+    lightboxImg.src = src;
+    lightboxCaption.textContent = caption || '';
+    lightboxModal.classList.add('active');
+  };
+
+  closeLightbox = function() {
+    lightboxModal.classList.remove('active');
+    lightboxImg.src = '';
+  };
+
   // Event Listeners
   btnNext.addEventListener('click', nextSlide);
   btnPrev.addEventListener('click', prevSlide);
@@ -101,6 +118,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Keyboard navigation
   window.addEventListener('keydown', (e) => {
+    // If lightbox is open, ESC closes it
+    if (lightboxModal.classList.contains('active')) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+        return;
+      }
+    }
+
     switch (e.key) {
       case 'ArrowRight':
       case 'PageDown':
