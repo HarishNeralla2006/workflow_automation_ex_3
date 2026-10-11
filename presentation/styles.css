@@ -57,6 +57,15 @@ body {
   user-select: none;
 }
 
+.deck-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
 /* Organic Corner Accents */
 .corner-accent-tl {
   position: fixed;

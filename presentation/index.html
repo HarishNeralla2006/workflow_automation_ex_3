@@ -10,33 +10,41 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Organic Ambient Aesthetic Background Accents -->
-  <div class="blob-accent-top-left"></div>
-  <div class="blob-accent-bottom-right"></div>
+  <!-- Organic Green Corner Accents -->
+  <svg class="corner-accent-tl" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M-20 -20 C 40 -10, 80 15, 60 55 C 40 95, 110 90, 70 140 C 35 120, -10 110, -20 -20 Z" fill="#4ade80" opacity="0.85" />
+    <path d="M-10 -10 C 25 -5, 50 15, 38 42 C 25 70, 75 68, 48 105 C 22 90, -5 85, -10 -10 Z" fill="#22c55e" opacity="0.4" />
+  </svg>
 
-  <!-- Deck Master Container -->
-  <div class="deck-container">
-    
-    <!-- Top Persistent Navigation Header -->
-    <header class="deck-header">
-      <div class="deck-branding">
-        <div id="projectBadge" class="project-tag tag-intro">
-          <span>Overview</span>
-        </div>
+  <svg class="corner-accent-br" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M180 180 C 120 170, 80 145, 100 105 C 120 65, 50 70, 90 20 C 125 40, 170 50, 180 180 Z" fill="#4ade80" opacity="0.85" />
+    <path d="M170 170 C 135 165, 110 145, 122 118 C 135 90, 85 92, 112 55 C 138 70, 165 75, 170 170 Z" fill="#22c55e" opacity="0.4" />
+  </svg>
+
+  <!-- Top Persistent Navigation Header -->
+  <header class="deck-header">
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="deck-branding">
+      <div id="projectBadge" class="project-tag tag-intro">
+        <span>Overview</span>
       </div>
+    </div>
 
-      <div class="deck-controls">
-        <span class="slide-counter" id="slideCounter">1 / 16</span>
-        <button class="btn-ctrl" id="btnPrev" title="Previous Slide (Left Arrow)">&larr; Prev</button>
-        <button class="btn-ctrl" id="btnNext" title="Next Slide (Right Arrow or Space)">Next &rarr;</button>
-        <button class="btn-ctrl" id="btnFullscreen" title="Toggle Fullscreen (F)">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-        </button>
-      </div>
-    </header>
+    <div class="deck-controls">
+      <span class="slide-counter" id="slideCounter">1 / 16</span>
+      <button class="btn-ctrl" id="btnPrev" title="Previous Slide (Left Arrow)">&larr; Prev</button>
+      <button class="btn-ctrl" id="btnNext" title="Next Slide (Right Arrow or Space)">Next &rarr;</button>
+      <button class="btn-ctrl" id="btnFullscreen" title="Toggle Fullscreen (F)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+      </button>
+    </div>
+  </header>
 
-    <!-- Slide Viewport -->
-    <main class="slides-viewport">
+  <!-- Slide Viewport -->
+  <main class="slides-viewport">
 
       <!-- ========================================================
            SLIDE 1: Executive Roadmap & Agenda
@@ -1574,35 +1582,27 @@
 
     </main>
 
-    <!-- Bottom Lightbox Modal for Diagram Zoom -->
-    <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox()">
-      <div class="lightbox-content" onclick="event.stopPropagation()">
-        <div class="lightbox-header">
-          <span id="lightboxCaption" class="lightbox-caption">Diagram Zoom</span>
-          <button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>
-        </div>
-        <div class="lightbox-body">
-          <img id="lightboxImg" src="" alt="Zoomed Diagram">
-        </div>
+  <!-- Bottom Navigation Footer Bar -->
+  <footer class="deck-footer">
+    <div class="dots-nav" id="dotsNav"></div>
+    <div class="key-hint">
+      <span>Navigate: <span class="key-badge">&larr;</span> <span class="key-badge">&rarr;</span> or <span class="key-badge">Space</span></span>
+      <span>Inspect Diagram: <span class="key-badge">Click Image</span></span>
+      <span>Fullscreen: <span class="key-badge">F</span></span>
+    </div>
+  </footer>
+
+  <!-- Bottom Lightbox Modal for Diagram Zoom -->
+  <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox()">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <div class="lightbox-header">
+        <span id="lightboxCaption" class="lightbox-caption">Diagram Zoom</span>
+        <button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>
+      </div>
+      <div class="lightbox-body">
+        <img id="lightboxImg" src="" alt="Zoomed Diagram">
       </div>
     </div>
-
-    <!-- Bottom Navigation Footer Bar -->
-    <footer class="deck-footer">
-      <div class="nav-hints">
-        <span>Navigate: <kbd>&larr;</kbd> <kbd>&rarr;</kbd> or <kbd>Space</kbd></span>
-        <span>Inspect Diagram: <kbd>Click Image</kbd></span>
-        <span>Fullscreen: <kbd>F</kbd></span>
-      </div>
-      <div class="dots-nav" id="dotsNav"></div>
-      <div class="footer-status-pill">Camunda 8 &bull; BPMN 2.0 &bull; DMN 1.3</div>
-    </footer>
-
-    <!-- Top Loading Progress Bar -->
-    <div class="progress-bar-container">
-      <div class="progress-bar" id="progressBar"></div>
-    </div>
-
   </div>
 
   <script src="app.js"></script>
